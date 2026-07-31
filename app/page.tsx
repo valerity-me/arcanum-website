@@ -1,8 +1,9 @@
 import CinematicHero from "@/components/CinematicHero";
 
-// Deliberately conservative: no ratingValue/reviewCount/offers/price. The app
-// isn't published on any store yet, so those fields would be fabricated —
-// this only states what's actually true today.
+// No ratingValue/reviewCount — the app isn't published on any store yet, so
+// those would be fabricated. Subscription prices ARE real (configured in App
+// Store Connect), so those are included; availability is PreOrder since the
+// app itself isn't live yet.
 const appJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -15,6 +16,47 @@ const appJsonLd = {
     "@type": "Organization",
     name: "VO Digital",
   },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Weekly subscription",
+      price: "1.99",
+      priceCurrency: "USD",
+      availability: "https://schema.org/PreOrder",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "1.99",
+        priceCurrency: "USD",
+        billingDuration: "P1W",
+      },
+    },
+    {
+      "@type": "Offer",
+      name: "Monthly subscription",
+      price: "4.99",
+      priceCurrency: "USD",
+      availability: "https://schema.org/PreOrder",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "4.99",
+        priceCurrency: "USD",
+        billingDuration: "P1M",
+      },
+    },
+    {
+      "@type": "Offer",
+      name: "Yearly subscription",
+      price: "39.99",
+      priceCurrency: "USD",
+      availability: "https://schema.org/PreOrder",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "39.99",
+        priceCurrency: "USD",
+        billingDuration: "P1Y",
+      },
+    },
+  ],
 };
 
 // Public homepage: a single full-viewport cinematic hero (video + store badges),
