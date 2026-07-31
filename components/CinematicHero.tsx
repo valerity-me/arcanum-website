@@ -19,7 +19,7 @@ export default function CinematicHero() {
           softly at its own edges (no hard rounded-card look) so it reads as
           ambient background, not a cropped photo. Desktop: full-bleed cover. */}
       <video
-        className="absolute left-1/2 top-[38%] z-0 h-[68%] w-[96%] -translate-x-1/2 -translate-y-1/2 object-cover object-[70%_44%] [mask-image:radial-gradient(85%_78%_at_50%_42%,#000_45%,transparent_100%)] sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0 sm:object-center sm:[mask-image:none]"
+        className="mobile-video-fade absolute left-1/2 top-[38%] z-0 h-[68%] w-[96%] -translate-x-1/2 -translate-y-1/2 object-cover object-[90%_42%] sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0 sm:object-center"
         src={VIDEO_URL}
         autoPlay
         loop

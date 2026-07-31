@@ -50,6 +50,19 @@ body {
   mask-image: linear-gradient(to top, black 0%, transparent 45%);
 }
 
+/* Mobile hero video: soft radial fade so the frame melts into the dark
+   background instead of ending in a hard edge. Defined as an explicit class
+   (not a Tailwind arbitrary [mask-image:...] value) so the -webkit- prefixed
+   property is always present — Safari/iOS ignores unprefixed `mask-image` in
+   many versions and silently renders a hard-edged rectangle instead. Scoped to
+   small screens internally so the desktop full-bleed video needs no override. */
+@media (max-width: 639px) {
+  .mobile-video-fade {
+    -webkit-mask-image: radial-gradient(85% 78% at 50% 42%, #000 45%, transparent 100%);
+    mask-image: radial-gradient(85% 78% at 50% 42%, #000 45%, transparent 100%);
+  }
+}
+
 /* Liquid glass: near-transparent white with a thin luminous gradient stroke. */
 .liquid-glass {
   background: rgba(255, 255, 255, 0.01);
