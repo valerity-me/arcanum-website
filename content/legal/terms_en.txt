@@ -1,0 +1,41 @@
+TERMS OF USE
+
+Effective date: July 24, 2026
+
+Welcome to Arcanum. By using the Arcanum application (the "App"), developed by VO Digital, a sole proprietorship registered in the Republic of Kazakhstan ("we," "us"), you agree to these Terms.
+
+1. Description of the service
+
+Arcanum is an app for entertainment, self-reflection, and motivation: a daily card, tarot spreads, a natal chart, astrological compatibility, and related features. A full spread interpretation, as well as detailed natal chart and compatibility insights, may be generated with the help of a third-party AI service (Google's Gemini API); what data is sent for this and how it is handled is described in our Privacy Policy. AI-generated text may not always be accurate or complete. The App's content is for informational and entertainment purposes only and is NOT medical, psychological, financial, legal, or other professional advice. Any decisions you make based on the App's content are your own responsibility.
+
+2. Age restrictions
+
+The App is intended for users aged 16 and older. If you are under 16, please use the App only with the consent of a parent or legal guardian.
+
+3. Subscriptions and payment
+
+Some features are free; others require a paid subscription (monthly or yearly), which may include a free trial period. Payment and auto-renewal are processed through the App Store or Google Play under their own terms. You can cancel your subscription at any time in your Apple ID or Google Play account settings — cancellation takes effect at the end of the current paid period. Refunds are governed by the respective app store's (Apple/Google) policy, not by us directly.
+
+4. Promo codes
+
+Select users may receive promo codes granting temporary free access to premium features. Promo codes are issued at our discretion, may have a limited validity period, and cannot be exchanged for cash.
+
+5. Content rights
+
+All text, illustrations, design, and other materials in the App belong to us or are used by us under a valid license. You may use them only for personal, non-commercial use within the App — copying, distributing, or commercial use without our consent is prohibited.
+
+6. Limitation of liability
+
+The App is provided "as is." We do not guarantee it is error-free or uninterrupted and are not liable for decisions made based on the App's content.
+
+7. Changes and discontinuation of service
+
+We may modify, add to, or discontinue features of the App from time to time. We will notify you of material changes to these Terms through the App.
+
+8. Governing law
+
+These Terms are governed by the laws of the Republic of Kazakhstan.
+
+9. Contact
+
+For questions about using the App, contact us at: valerity.me@gmail.com

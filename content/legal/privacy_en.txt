@@ -1,0 +1,91 @@
+PRIVACY POLICY
+
+Effective date: July 24, 2026
+
+VO Digital ("we," "us," or "our"), a sole proprietorship registered in the Republic of Kazakhstan, develops the Arcanum mobile application (the "App"). This Privacy Policy explains what data the App processes, how we use it, who we share it with, and the rights you have. We are the data controller for the processing described here. If you have any questions, contact us at valerity.me@gmail.com.
+
+1. Data that stays on your device only
+
+While using the App, you may enter: your birth date, time, and place (and optionally your partner's), a nickname, gender, and a profile photo from your device's gallery. This information is used to calculate your natal chart, zodiac signs, and compatibility, and to personalize the interface — all of these calculations run directly on your device.
+
+Your exact birth date, time, and place are stored LOCALLY on your device and are never transmitted to our servers in their original form. We have no access to them.
+
+2. Data sent to our server to generate a spread interpretation
+
+When you request a full interpretation of a spread, the following is sent to our server: the spread's theme, the list of drawn cards (which cards, in which positions, upright or reversed), your app language, an anonymous device identifier (see section 5), and — if you provided them — your relationship status and any free-text question you typed for the spread. Please note that a free-text question is written by you and may contain personal information if you choose to include it; only send what you are comfortable sharing.
+
+Our server uses this data to generate the interpretation text through a third-party AI provider (see section 7) and returns it to you. We do NOT send your name, birth date, time, or place for this feature.
+
+3. Data sent to our server to generate a natal portrait or compatibility interpretation
+
+When you open the "Detailed insight" on the Astrology tab (a full AI-generated natal portrait) or a compatibility interpretation with a partner, only derived astrological data — computed on your device — is sent to our server: the zodiac signs and house numbers your planets fall in, the significant aspects between planets (for compatibility, between your chart and your partner's), and the resulting compatibility scores, along with an anonymous device identifier and your app language.
+
+We do NOT send your (or your partner's) exact birth date, time, or place for this feature, nor your name: the server only receives already-abstracted signs, house numbers, and aspect types, not the original birth data.
+
+4. What we store on our server, and for how long
+
+To let the App remember your past readings and to power features like your reading history and personalized context, our server stores, linked to your anonymous device identifier:
+- your reading history: the theme and drawn cards of each spread, and the generated interpretation text;
+- a compact profile derived from that history (how often you use each theme, recurring cards, and your most recent readings).
+
+This data is stored for as long as you use the App. It is not linked to your name or contact details — only to the anonymous device identifier. You can delete all of it at any time (see section 9). The free-text question and relationship status from section 2 are used to generate the interpretation and are sent to the AI provider, but are not stored as separate fields by us; note that the generated interpretation we store may reflect the content of your question.
+
+5. Technical identifiers
+
+The App generates an anonymous technical device identifier (a random value, not tied to your name, birth date, or contact details). It is used to link your server-side reading history and profile (sections 2-4), to enforce fair-use limits, and to prevent abuse. If we later add account sign-in, this identifier may be associated with your account.
+
+6. Data related to subscriptions
+
+If you purchase a subscription, payment is processed by the App Store (Apple Inc.), Google Play (Google LLC), and our billing partner, RevenueCat, Inc. They receive technical purchase data (device identifier, subscription status, transaction history) as needed to process payment and verify access. We never receive your card or bank details — only Apple and Google do.
+
+7. Third-party service providers (sub-processors)
+
+We share the limited data described above with the following providers, only to run the App:
+- Apple Inc. and Google LLC — app distribution and payment processing;
+- RevenueCat, Inc. — subscription management (privacy policy: revenuecat.com/privacy);
+- Google LLC (Gemini API) — generation of interpretation texts from the data in sections 2-3 (privacy policy: policies.google.com/privacy; API terms: ai.google.dev/gemini-api/terms). Data sent to the Gemini API on a paid tier is not used to train Google's models;
+- our server hosting provider, located in the Netherlands, where the data in sections 2-5 is processed and stored.
+
+We do not sell your data and do not share it with anyone for their own marketing.
+
+8. International data transfers
+
+Our server and some of the providers above are located outside your country, including in the Netherlands and the United States. Where we transfer personal data internationally (for example, from the European Economic Area or the United Kingdom), we rely on appropriate safeguards as required by applicable law. By using the App you understand that the limited data described here is processed in these locations.
+
+9. Your rights, and how to delete your data
+
+Regardless of where you live, you can delete all of your data directly in the App: open Settings > Data & account > "Delete account & data." This permanently removes your local data on the device AND your server-side reading history and profile. You can also uninstall the App to remove local data, and contact us by email for any request.
+
+Depending on where you live, you may also have the right to: access the data we hold about you; correct it; restrict or object to its processing; receive a copy (portability); and withdraw consent. To exercise any of these, contact us at valerity.me@gmail.com. If you are in the European Economic Area or the United Kingdom, you also have the right to lodge a complaint with your local data protection authority.
+
+10. California residents (CCPA/CPRA)
+
+If you are a California resident: the categories of personal information we process are described in sections 1-6 (identifiers such as the anonymous device ID, and information you provide such as astrological and reading data). We do NOT "sell" your personal information and do NOT "share" it for cross-context behavioral advertising, as those terms are defined under California law. You have the right to know what we process, to request deletion, and to correct your information — you can exercise deletion directly in the App (section 9) or by contacting us. We will not discriminate against you for exercising these rights.
+
+11. Do Not Track
+
+The App does not track you across other apps or websites, and it does not respond to browser "Do Not Track" signals because it does not perform such tracking in the first place.
+
+12. Advertising
+
+The App itself does not contain advertising, does not use advertising or ad-tracking SDKs, and does not show ads. We may promote the App through advertising on external platforms (for example, social networks) to reach new users. If in the future we introduce any advertising, attribution, or measurement technology that collects data through the App, we will update this Policy and the App's store privacy disclosures beforehand, and, where required, ask for your consent.
+
+13. Notifications
+
+The App may send local reminders (e.g., about your daily card). These notifications are generated and scheduled entirely on your device, without contacting any server.
+
+14. Children
+
+The App is not intended for individuals under 16 and does not knowingly collect data from children. If you believe a child has provided us data, contact us and we will delete it.
+
+15. Changes to this Policy
+
+We may update this Policy as the App evolves. We will notify you of material changes through the App and update the effective date above.
+
+16. Governing law
+
+This Policy is governed by the laws of the Republic of Kazakhstan, without prejudice to any mandatory data-protection rights you have under the laws of your country of residence (such as the GDPR or CCPA).
+
+17. Contact
+
+For any privacy questions or requests, contact us at: valerity.me@gmail.com
