@@ -4,6 +4,8 @@ import { readLegal } from "@/lib/legal";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Arcanum",
+  description: "How Arcanum processes data: what stays on your device, what's sent to our server, and your rights.",
+  alternates: { canonical: "/privacy/" },
   robots: { index: true, follow: true },
 };
 

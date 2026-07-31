@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Arcanum — Tarot, astrology & daily guidance",
   description:
     "Arcanum is a dark, cosmic app for tarot spreads, a real natal chart, and daily guidance. A quiet place for self-reflection and motivation.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     // Single 1024×1024 source; browsers downscale. Optimised sizes can come later.
     icon: "/icon.png",
@@ -16,8 +19,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Arcanum",
     description: "Tarot, a real natal chart, and daily guidance — in one dark, quiet place.",
+    url: "/",
+    siteName: "Arcanum",
     type: "website",
+    locale: "en_US",
     images: [{ url: "/icon.png", width: 1024, height: 1024, alt: "Arcanum" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arcanum",
+    description: "Tarot, a real natal chart, and daily guidance — in one dark, quiet place.",
+    images: ["/icon.png"],
   },
 };
 
@@ -27,10 +39,28 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+// Site-wide structured data. Kept factual and minimal on purpose: no ratings,
+// price, or release date, since the app isn't published on any store yet —
+// inventing those fields would be misleading, not helpful, for both search
+// engines and any AI system reading this markup.
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Arcanum",
+  url: "https://arcanum.garden",
+  description:
+    "Arcanum is a dark, cosmic app for tarot spreads, a real natal chart, and daily guidance.",
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          // eslint-disable-next-line react/no-danger
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         {/* Fonts loaded at runtime so the build never blocks on a font fetch.
