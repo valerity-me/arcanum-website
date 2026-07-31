@@ -89,7 +89,7 @@ export default function CinematicHero() {
         </nav>
 
         {/* Hero content */}
-        <div className="z-10 flex flex-1 flex-col justify-end px-4 pb-8 sm:px-6 md:px-12 md:pb-16">
+        <div className="z-10 flex flex-1 flex-col justify-end px-4 pb-24 sm:px-6 sm:pb-24 md:px-12 md:pb-28">
           <div className="max-w-2xl">
             {/* Title */}
             <h1
@@ -123,32 +123,38 @@ export default function CinematicHero() {
                 delay="700ms"
               />
             </div>
-
-            {/* On-image footer: legal links, contact and copyright — no black bar */}
-            <div
-              className="animate-blur-fade-up mt-7 flex flex-col gap-1.5 text-xs text-gray-400 sm:mt-9"
-              style={{ animationDelay: "800ms" }}
-            >
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-                <a href="/privacy/" className="cursor-pointer transition-colors hover:text-white">
-                  Privacy Policy
-                </a>
-                <a href="/terms/" className="cursor-pointer transition-colors hover:text-white">
-                  Terms of Use
-                </a>
-                <a
-                  href="mailto:support@arcanum.garden"
-                  className="cursor-pointer transition-colors hover:text-white"
-                >
-                  support@arcanum.garden
-                </a>
-              </div>
-              <p className="max-w-2xl text-[11px] leading-relaxed text-gray-500">
-                © {new Date().getFullYear()} VO Digital — a sole proprietorship registered in the
-                Republic of Kazakhstan. For entertainment and self-reflection.
-              </p>
-            </div>
           </div>
+        </div>
+
+        {/* Legal footer: pinned close to the true bottom edge, independent of the
+            title/description/badges above (which bottom-align as their own
+            block). `env(safe-area-inset-bottom)` keeps it clear of the home
+            indicator bar on notched iPhones. */}
+        <div
+          className="animate-blur-fade-up absolute inset-x-0 bottom-0 z-10 flex flex-col px-4 text-xs text-gray-400 sm:px-6 md:px-12"
+          style={{
+            animationDelay: "800ms",
+            paddingBottom: "max(0.875rem, env(safe-area-inset-bottom))",
+          }}
+        >
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <a href="/privacy/" className="cursor-pointer transition-colors hover:text-white">
+              Privacy Policy
+            </a>
+            <a href="/terms/" className="cursor-pointer transition-colors hover:text-white">
+              Terms of Use
+            </a>
+            <a
+              href="mailto:support@arcanum.garden"
+              className="cursor-pointer transition-colors hover:text-white"
+            >
+              support@arcanum.garden
+            </a>
+          </div>
+          <p className="mt-1.5 max-w-2xl text-[11px] leading-relaxed text-gray-500">
+            © {new Date().getFullYear()} VO Digital — a sole proprietorship registered in the
+            Republic of Kazakhstan. For entertainment and self-reflection.
+          </p>
         </div>
       </div>
     </div>
