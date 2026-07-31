@@ -1,13 +1,7 @@
 import CinematicHero from "@/components/CinematicHero";
-import Footer from "@/components/Footer";
 
-// Public homepage: the cinematic hero (video + store badges), followed by a
-// slim footer carrying the Privacy / Terms / support links Apple needs.
+// Public homepage: a single full-viewport cinematic hero (video + store badges),
+// with legal links, contact and copyright laid over the image itself.
 export default function Home() {
-  return (
-    <>
-      <CinematicHero />
-      <Footer />
-    </>
-  );
+  return <CinematicHero />;
 }

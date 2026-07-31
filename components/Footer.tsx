@@ -8,8 +8,8 @@ export default function Footer() {
           <p className="font-display text-lg text-paper">Arcanum</p>
           <p className="mt-1 font-body text-sm">
             by Aeternum ·{" "}
-            <a className="cursor-pointer hover:text-paper" href="mailto:valerity.me@gmail.com">
-              valerity.me@gmail.com
+            <a className="cursor-pointer hover:text-paper" href="mailto:support@arcanum.garden">
+              support@arcanum.garden
             </a>
           </p>
           {/* DSA trader details go here once confirmed by Valery (address / phone / email). */}

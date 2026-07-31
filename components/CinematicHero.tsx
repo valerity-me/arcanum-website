@@ -5,7 +5,7 @@ const VIDEO_URL = "/hero-loop.mp4";
 export default function CinematicHero() {
   return (
     <div
-      className="relative min-h-screen w-full overflow-hidden bg-black text-white"
+      className="relative h-[100svh] w-full overflow-hidden bg-black text-white"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Background video */}
@@ -22,7 +22,7 @@ export default function CinematicHero() {
       <div className="bottom-blur-mask pointer-events-none absolute inset-0 z-[1]" aria-hidden />
 
       {/* Foreground column */}
-      <div className="relative z-10 flex min-h-screen flex-col">
+      <div className="relative z-10 flex h-full flex-col">
         {/* Navbar — logo only */}
         <nav className="relative z-50 flex items-center justify-between px-4 py-4 sm:px-6 md:px-12 md:py-6">
           <div
@@ -67,6 +67,31 @@ export default function CinematicHero() {
                 icon={<GooglePlayGlyph />}
                 delay="700ms"
               />
+            </div>
+
+            {/* On-image footer: legal links, contact and copyright — no black bar */}
+            <div
+              className="animate-blur-fade-up mt-7 flex flex-col gap-1.5 text-xs text-gray-400 sm:mt-9"
+              style={{ animationDelay: "800ms" }}
+            >
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+                <a href="/privacy/" className="cursor-pointer transition-colors hover:text-white">
+                  Privacy Policy
+                </a>
+                <a href="/terms/" className="cursor-pointer transition-colors hover:text-white">
+                  Terms of Use
+                </a>
+                <a
+                  href="mailto:support@arcanum.garden"
+                  className="cursor-pointer transition-colors hover:text-white"
+                >
+                  support@arcanum.garden
+                </a>
+              </div>
+              <p className="max-w-2xl text-[11px] leading-relaxed text-gray-500">
+                © {new Date().getFullYear()} VO Digital — a sole proprietorship registered in the
+                Republic of Kazakhstan. For entertainment and self-reflection.
+              </p>
             </div>
           </div>
         </div>
