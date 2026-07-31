@@ -2,7 +2,7 @@ PRIVACY POLICY
 
 Effective date: July 24, 2026
 
-VO Digital ("we," "us," or "our"), a sole proprietorship registered in the Republic of Kazakhstan, develops the Arcanum mobile application (the "App"). This Privacy Policy explains what data the App processes, how we use it, who we share it with, and the rights you have. We are the data controller for the processing described here. If you have any questions, contact us at valerity.me@gmail.com.
+VO Digital ("we," "us," or "our"), a sole proprietorship registered in the Republic of Kazakhstan, develops the Arcanum mobile application (the "App"). This Privacy Policy explains what data the App processes, how we use it, who we share it with, and the rights you have. We are the data controller for the processing described here. If you have any questions, contact us at support@arcanum.garden.
 
 1. Data that stays on your device only
 
@@ -56,7 +56,7 @@ Our server and some of the providers above are located outside your country, inc
 
 Regardless of where you live, you can delete all of your data directly in the App: open Settings > Data & account > "Delete account & data." This permanently removes your local data on the device AND your server-side reading history and profile. You can also uninstall the App to remove local data, and contact us by email for any request.
 
-Depending on where you live, you may also have the right to: access the data we hold about you; correct it; restrict or object to its processing; receive a copy (portability); and withdraw consent. To exercise any of these, contact us at valerity.me@gmail.com. If you are in the European Economic Area or the United Kingdom, you also have the right to lodge a complaint with your local data protection authority.
+Depending on where you live, you may also have the right to: access the data we hold about you; correct it; restrict or object to its processing; receive a copy (portability); and withdraw consent. To exercise any of these, contact us at support@arcanum.garden. If you are in the European Economic Area or the United Kingdom, you also have the right to lodge a complaint with your local data protection authority.
 
 10. California residents (CCPA/CPRA)
 
@@ -88,4 +88,4 @@ This Policy is governed by the laws of the Republic of Kazakhstan, without preju
 
 17. Contact
 
-For any privacy questions or requests, contact us at: valerity.me@gmail.com
+For any privacy questions or requests, contact us at: support@arcanum.garden

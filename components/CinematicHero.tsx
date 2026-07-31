@@ -1,8 +1,31 @@
 "use client";
 
+import { useEffect } from "react";
+
 const VIDEO_URL = "/hero-loop.mp4";
 
 export default function CinematicHero() {
+  // Robust mobile viewport height: CSS vh/svh/dvh units are inconsistent
+  // across Safari versions (some don't account for the floating toolbar, some
+  // leave a dead gap above its own chrome). window.innerHeight always matches
+  // the real, currently-visible area, in every browser. We mirror it into a
+  // CSS var and use that instead of relying on any viewport unit.
+  useEffect(() => {
+    const setRealVh = () => {
+      const h = window.visualViewport?.height ?? window.innerHeight;
+      document.documentElement.style.setProperty("--real-vh", `${h}px`);
+    };
+    setRealVh();
+    window.addEventListener("resize", setRealVh);
+    window.addEventListener("orientationchange", setRealVh);
+    window.visualViewport?.addEventListener("resize", setRealVh);
+    return () => {
+      window.removeEventListener("resize", setRealVh);
+      window.removeEventListener("orientationchange", setRealVh);
+      window.visualViewport?.removeEventListener("resize", setRealVh);
+    };
+  }, []);
+
   return (
     <div
       className="hero-viewport relative w-full overflow-hidden bg-black text-white"
@@ -15,18 +38,8 @@ export default function CinematicHero() {
       />
 
       {/* Background video.
-          Mobile: a large, centred frame focused on the card that fades out
-          softly at its own edges (no hard rounded-card look) so it reads as
-          ambient background, not a cropped photo. Desktop: full-bleed cover.
-          The mask lives on this wrapper <div>, not on the <video> itself:
-          Safari/WebKit renders hardware-decoded video on its own compositing
-          layer and often ignores CSS masks applied directly to a <video>
-          element, even with -webkit-mask-image present. Masking a plain div
-          and letting the video simply fill it is the reliable cross-browser
-          pattern. */}
-      <div
-        className="mobile-video-fade absolute left-1/2 top-[38%] z-0 h-[68%] w-[96%] -translate-x-1/2 -translate-y-1/2 overflow-hidden sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0"
-      >
+          Mobile: a large frame focused on the card. Desktop: full-bleed cover. */}
+      <div className="absolute left-1/2 top-[32%] z-0 h-[80%] w-[99%] -translate-x-1/2 -translate-y-1/2 overflow-hidden sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0">
         <video
           className="h-full w-full object-cover object-[90%_42%] sm:object-center"
           src={VIDEO_URL}
@@ -34,6 +47,21 @@ export default function CinematicHero() {
           loop
           muted
           playsInline
+        />
+
+        {/* Fade to black at the top and bottom edges of the video frame.
+            Plain gradient overlays, not a CSS mask/filter: masking a <video>
+            element is unreliable across Safari versions (hardware video
+            decode lives on its own compositing layer that often ignores
+            mask-image), whereas an ordinary alpha-blended gradient div works
+            identically in every browser. */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black to-transparent sm:hidden"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent sm:hidden"
+          aria-hidden
         />
       </div>
 
@@ -60,7 +88,7 @@ export default function CinematicHero() {
           <div className="max-w-2xl">
             {/* Title */}
             <h1
-              className="animate-blur-fade-up mb-2 text-3xl font-normal sm:mb-4 sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
+              className="animate-blur-fade-up mb-2 text-2xl font-normal sm:mb-4 sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
               style={{ animationDelay: "400ms", letterSpacing: "-0.04em" }}
             >
               Your cards are waiting
