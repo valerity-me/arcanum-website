@@ -76,10 +76,15 @@ export default function CinematicHero() {
         {/* Navbar — logo only */}
         <nav className="relative z-50 flex items-center justify-between px-4 py-4 sm:px-6 md:px-12 md:py-6">
           <div
-            className="animate-blur-fade-up flex h-8 items-center text-xl font-semibold tracking-[0.25em] md:h-10 md:text-2xl"
+            className="animate-blur-fade-up flex h-8 items-center md:h-10"
             style={{ animationDelay: "0ms" }}
           >
-            ARCANUM
+            <span
+              className="text-xl font-medium tracking-[0.25em] md:text-2xl"
+              style={{ display: "inline-block", transform: "scaleY(0.9)" }}
+            >
+              ARCANUM
+            </span>
           </div>
         </nav>
 
