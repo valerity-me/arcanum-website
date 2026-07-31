@@ -8,9 +8,18 @@ export default function CinematicHero() {
       className="relative h-[100svh] w-full overflow-hidden bg-black text-white"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
-      {/* Background video */}
+      {/* Mobile-only ambient glow behind the floating card */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(106,46,230,0.20),transparent_60%)] sm:hidden"
+        aria-hidden
+      />
+
+      {/* Background video.
+          Mobile: a smaller, centred frame focused on the card, with soft-faded
+          edges (mask) so it melts into the dark background — card gets breathing
+          room on all sides. Desktop: full-bleed cover. */}
       <video
-        className="absolute inset-0 z-0 h-full w-full object-cover"
+        className="absolute left-1/2 top-[42%] z-0 h-[54%] w-[92%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-[2rem] object-cover object-[76%_45%] [mask-image:radial-gradient(120%_120%_at_50%_45%,#000_50%,transparent_100%)] sm:left-0 sm:top-0 sm:h-full sm:w-full sm:max-w-none sm:translate-x-0 sm:translate-y-0 sm:rounded-none sm:object-center sm:[mask-image:none]"
         src={VIDEO_URL}
         autoPlay
         loop
@@ -18,8 +27,11 @@ export default function CinematicHero() {
         playsInline
       />
 
-      {/* Bottom-only blur overlay — no dark gradient */}
-      <div className="bottom-blur-mask pointer-events-none absolute inset-0 z-[1]" aria-hidden />
+      {/* Bottom blur overlay — desktop full-bleed only (mobile text sits on the dark bg) */}
+      <div
+        className="bottom-blur-mask pointer-events-none absolute inset-0 z-[1] hidden sm:block"
+        aria-hidden
+      />
 
       {/* Foreground column */}
       <div className="relative z-10 flex h-full flex-col">

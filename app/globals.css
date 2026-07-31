@@ -32,6 +32,12 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+  /* Entrance animations must not leave content stuck invisible/blurred. */
+  .animate-blur-fade-up {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
 }
 
 /* ── Cinematic hero (21st.dev-style) primitives ───────────────────────────── */
@@ -94,4 +100,21 @@ body {
 .animate-blur-fade-up {
   opacity: 0;
   animation: blurFadeUp 1s ease-out forwards;
+}
+
+/* On small screens, drop the filter:blur from the entrance animation. Animating
+   `filter` is one of the most GPU-expensive CSS properties and can stall
+   mid-effect on mobile browsers, leaving text stuck visibly blurred. A plain
+   opacity+translate reveal is cheap and always completes. */
+@media (max-width: 639px) {
+  @keyframes blurFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
