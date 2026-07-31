@@ -5,7 +5,7 @@ const VIDEO_URL = "/hero-loop.mp4";
 export default function CinematicHero() {
   return (
     <div
-      className="relative h-[100svh] w-full overflow-hidden bg-black text-white"
+      className="relative h-[100dvh] w-full overflow-hidden bg-black text-white"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Mobile-only ambient glow behind the floating card */}
@@ -15,11 +15,11 @@ export default function CinematicHero() {
       />
 
       {/* Background video.
-          Mobile: a smaller, centred frame focused on the card, with soft-faded
-          edges (mask) so it melts into the dark background — card gets breathing
-          room on all sides. Desktop: full-bleed cover. */}
+          Mobile: a large, centred frame focused on the card that fades out
+          softly at its own edges (no hard rounded-card look) so it reads as
+          ambient background, not a cropped photo. Desktop: full-bleed cover. */}
       <video
-        className="absolute left-1/2 top-[42%] z-0 h-[54%] w-[92%] max-w-md -translate-x-1/2 -translate-y-1/2 rounded-[2rem] object-cover object-[76%_45%] [mask-image:radial-gradient(120%_120%_at_50%_45%,#000_50%,transparent_100%)] sm:left-0 sm:top-0 sm:h-full sm:w-full sm:max-w-none sm:translate-x-0 sm:translate-y-0 sm:rounded-none sm:object-center sm:[mask-image:none]"
+        className="absolute left-1/2 top-[38%] z-0 h-[68%] w-[96%] -translate-x-1/2 -translate-y-1/2 object-cover object-[70%_44%] [mask-image:radial-gradient(85%_78%_at_50%_42%,#000_45%,transparent_100%)] sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0 sm:object-center sm:[mask-image:none]"
         src={VIDEO_URL}
         autoPlay
         loop
@@ -50,7 +50,7 @@ export default function CinematicHero() {
           <div className="max-w-2xl">
             {/* Title */}
             <h1
-              className="animate-blur-fade-up mb-4 text-3xl font-normal sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
+              className="animate-blur-fade-up mb-2 text-3xl font-normal sm:mb-4 sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
               style={{ animationDelay: "400ms", letterSpacing: "-0.04em" }}
             >
               Your cards are waiting
@@ -58,7 +58,7 @@ export default function CinematicHero() {
 
             {/* Description */}
             <p
-              className="animate-blur-fade-up mb-6 max-w-xl text-base text-gray-300 sm:text-lg md:mb-10 md:text-xl"
+              className="animate-blur-fade-up mb-6 max-w-xl text-base text-gray-400 sm:text-lg md:mb-10 md:text-xl"
               style={{ animationDelay: "500ms" }}
             >
               Tarot, a real natal chart, and daily guidance — full readings that speak to your
