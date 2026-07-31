@@ -42,6 +42,19 @@ body {
 
 /* ── Cinematic hero (21st.dev-style) primitives ───────────────────────────── */
 
+/* Defensive full-viewport height stack for the hero. Each line overrides the
+   previous only if the browser understands the value: 100vh is the universal
+   fallback, -webkit-fill-available is the older iOS Safari mobile-viewport
+   fix, 100dvh is the modern standards-based one that tracks the *real*
+   visible viewport (shrinks/grows as the browser chrome shows/hides). Belt
+   and suspenders against any single approach having a quirk on a given iOS
+   Safari version. */
+.hero-viewport {
+  height: 100vh;
+  min-height: -webkit-fill-available;
+  height: 100dvh;
+}
+
 /* Bottom-only backdrop blur over the background video — no dark gradient. */
 .bottom-blur-mask {
   -webkit-backdrop-filter: blur(24px);

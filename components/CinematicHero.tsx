@@ -5,7 +5,7 @@ const VIDEO_URL = "/hero-loop.mp4";
 export default function CinematicHero() {
   return (
     <div
-      className="relative h-[100dvh] w-full overflow-hidden bg-black text-white"
+      className="hero-viewport relative w-full overflow-hidden bg-black text-white"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {/* Mobile-only ambient glow behind the floating card */}
@@ -17,15 +17,25 @@ export default function CinematicHero() {
       {/* Background video.
           Mobile: a large, centred frame focused on the card that fades out
           softly at its own edges (no hard rounded-card look) so it reads as
-          ambient background, not a cropped photo. Desktop: full-bleed cover. */}
-      <video
-        className="mobile-video-fade absolute left-1/2 top-[38%] z-0 h-[68%] w-[96%] -translate-x-1/2 -translate-y-1/2 object-cover object-[90%_42%] sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0 sm:object-center"
-        src={VIDEO_URL}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+          ambient background, not a cropped photo. Desktop: full-bleed cover.
+          The mask lives on this wrapper <div>, not on the <video> itself:
+          Safari/WebKit renders hardware-decoded video on its own compositing
+          layer and often ignores CSS masks applied directly to a <video>
+          element, even with -webkit-mask-image present. Masking a plain div
+          and letting the video simply fill it is the reliable cross-browser
+          pattern. */}
+      <div
+        className="mobile-video-fade absolute left-1/2 top-[38%] z-0 h-[68%] w-[96%] -translate-x-1/2 -translate-y-1/2 overflow-hidden sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0"
+      >
+        <video
+          className="h-full w-full object-cover object-[90%_42%] sm:object-center"
+          src={VIDEO_URL}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      </div>
 
       {/* Bottom blur overlay — desktop full-bleed only (mobile text sits on the dark bg) */}
       <div
