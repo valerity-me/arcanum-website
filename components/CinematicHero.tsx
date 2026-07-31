@@ -10,7 +10,7 @@ export default function CinematicHero() {
     >
       {/* Background video */}
       <video
-        className="fixed inset-0 z-0 h-full w-full object-cover"
+        className="absolute inset-0 z-0 h-full w-full object-cover"
         src={VIDEO_URL}
         autoPlay
         loop
@@ -19,7 +19,7 @@ export default function CinematicHero() {
       />
 
       {/* Bottom-only blur overlay — no dark gradient */}
-      <div className="bottom-blur-mask pointer-events-none fixed inset-0 z-[1]" aria-hidden />
+      <div className="bottom-blur-mask pointer-events-none absolute inset-0 z-[1]" aria-hidden />
 
       {/* Foreground column */}
       <div className="relative z-10 flex min-h-screen flex-col">
