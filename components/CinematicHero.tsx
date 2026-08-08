@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import AppStoreBadge from "./AppStoreBadge";
 
 const VIDEO_URL = "/hero-loop.mp4";
 
@@ -109,13 +110,10 @@ export default function CinematicHero() {
             </p>
 
             {/* App store badges */}
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4">
-              <StoreBadge
-                label="App Store"
-                sub="Coming soon"
-                icon={<AppleGlyph />}
-                delay="600ms"
-              />
+            <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+              <div className="animate-blur-fade-up" style={{ animationDelay: "600ms" }}>
+                <AppStoreBadge href={null} />
+              </div>
               <StoreBadge
                 label="Google Play"
                 sub="Coming soon"
@@ -187,14 +185,6 @@ function StoreBadge({
         <span className="text-sm font-semibold text-white sm:text-base">{label}</span>
       </span>
     </div>
-  );
-}
-
-function AppleGlyph() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M16.365 1.43c0 1.14-.42 2.2-1.12 3-.75.86-1.98 1.53-3.02 1.45-.13-1.1.42-2.27 1.1-3.02.76-.85 2.06-1.47 3.04-1.43zM20.5 17.2c-.55 1.27-.82 1.84-1.53 2.96-.99 1.57-2.39 3.52-4.12 3.53-1.54.01-1.94-1-4.03-.99-2.09.01-2.53 1.01-4.07.98-1.73-.02-3.05-1.78-4.04-3.35C-.9 16.7-1.2 12.06.72 9.6c1.12-1.43 2.63-2.26 4.06-2.26 1.46 0 2.38.99 3.59.99 1.17 0 1.88-.99 3.57-.99 1.28 0 2.63.7 3.6 1.9-3.16 1.73-2.64 6.24.36 7.96z" />
-    </svg>
   );
 }
 
