@@ -44,6 +44,7 @@ We share the limited data described above with the following providers, only to 
 - Apple Inc. and Google LLC — app distribution and payment processing;
 - RevenueCat, Inc. — subscription management (privacy policy: revenuecat.com/privacy);
 - Google LLC (Gemini API) — generation of interpretation texts from the data in sections 2-3 (privacy policy: policies.google.com/privacy; API terms: ai.google.dev/gemini-api/terms). Data sent to the Gemini API on a paid tier is not used to train Google's models;
+- PostHog, Inc. — product usage analytics (which screens and features are used, e.g. viewing the subscription offer), processed via PostHog Cloud (EU) (privacy policy: posthog.com/privacy). This data is linked only to the anonymous device identifier from section 5; we do not collect your IP address for this purpose;
 - our server hosting provider, located in the Netherlands, where the data in sections 2-5 is processed and stored.
 
 We do not sell your data and do not share it with anyone for their own marketing.
