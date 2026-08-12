@@ -51,7 +51,7 @@ We do not sell your data and do not share it with anyone for their own marketing
 
 8. International data transfers
 
-Our server and some of the providers above are located outside your country, including in the Netherlands and the United States. Where we transfer personal data internationally (for example, from the European Economic Area or the United Kingdom), we rely on appropriate safeguards as required by applicable law. By using the App you understand that the limited data described here is processed in these locations.
+Our server is located in the Netherlands. Some of the providers listed in section 7 operate from other countries, including the United States. Where we transfer personal data internationally (for example, from the European Economic Area or the United Kingdom), we rely on appropriate safeguards as required by applicable law. By using the App you understand that the limited data described here is processed in these locations.
 
 9. Your rights, and how to delete your data
 
