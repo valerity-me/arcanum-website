@@ -1,41 +1,45 @@
 TERMS OF USE
 
-Effective date: July 24, 2026
+Effective date: October 10, 2026
 
-Welcome to Arcanum. By using the Arcanum application (the "App"), developed by VO Digital, a sole proprietorship registered in the Republic of Kazakhstan ("we," "us"), you agree to these Terms.
+Welcome to Arcanum. By using the Arcanum application (listed in the app stores as Arcanum Garden; the "App"), developed by VO Digital, a sole proprietorship registered in the Republic of Kazakhstan ("we," "us"), you agree to these Terms.
 
 1. Description of the service
 
-Arcanum is an app for entertainment, self-reflection, and motivation: a daily card, tarot spreads, a natal chart, astrological compatibility, and related features. A full spread interpretation, as well as detailed natal chart and compatibility insights, may be generated with the help of a third-party AI service (Google's Gemini API); what data is sent for this and how it is handled is described in our Privacy Policy. AI-generated text may not always be accurate or complete. The App's content is for informational and entertainment purposes only and is NOT medical, psychological, financial, legal, or other professional advice. Any decisions you make based on the App's content are your own responsibility.
+Arcanum (listed in the app stores as Arcanum Garden) is an app for self-reflection, self-observation, and entertainment: a diary with day entries and mood marks, an archetype test, a profile of eight metrics, a wheel of life, analyses of your entries, as well as a daily card, tarot spreads, a natal chart, and astrological compatibility. Entry analyses, the signal marks used to calculate profile metrics and the wheel of life, a full spread interpretation, and detailed natal chart and compatibility insights may be generated with the help of a third-party AI service (Google's Gemini API); what data is sent for this and how it is handled is described in our Privacy Policy. AI-generated text and marks may not always be accurate or complete. The archetype test, profile metrics, wheel of life, and entry analyses are not a psychological assessment and do not describe the state of your health. The App's content is for informational and entertainment purposes only and is NOT medical, psychological, financial, legal, or other professional advice. Any decisions you make based on the App's content are your own responsibility. If you are struggling or thinking about harming yourself, please contact a doctor, a mental health professional, or your local emergency services.
 
-2. Age restrictions
+2. Your entries
+
+Day entries, life-area ratings, and other data you enter are stored on your device. You are responsible for their content. If you delete the App, reset your device, or lose it, this data may be lost and we will not be able to restore it. You can keep a copy by exporting your diary in the App.
+
+3. Age restrictions
 
 The App is intended for users aged 16 and older. If you are under 16, please use the App only with the consent of a parent or legal guardian.
 
-3. Subscriptions and payment
+4. Subscriptions and payment
 
-Some features are free; others require a paid subscription (monthly or yearly), which may include a free trial period. Payment and auto-renewal are processed through the App Store or Google Play under their own terms. You can cancel your subscription at any time in your Apple ID or Google Play account settings — cancellation takes effect at the end of the current paid period. Refunds are governed by the respective app store's (Apple/Google) policy, not by us directly.
+Some features are free; others require a paid subscription (monthly or yearly), which may include a free trial period. Payment and auto-renewal are processed through the App Store or Google Play under their own terms. You can cancel your subscription at any time in your Apple ID or Google Play account settings — cancellation takes effect at the end of the current paid period. Refunds are governed by the respective app store's (Apple/Google) policy, not by us directly. In particular, the subscription unlocks entry analyses after the first two and full AI interpretations of spreads, the natal chart, and compatibility; the set of paid features may change.
 
-4. Promo codes
+5. Promo codes
 
 Select users may receive promo codes granting temporary free access to premium features. Promo codes are issued at our discretion, may have a limited validity period, and cannot be exchanged for cash.
 
-5. Content rights
+6. Content rights
 
 All text, illustrations, design, and other materials in the App belong to us or are used by us under a valid license. You may use them only for personal, non-commercial use within the App — copying, distributing, or commercial use without our consent is prohibited.
 
-6. Limitation of liability
+7. Limitation of liability
 
 The App is provided "as is." We do not guarantee it is error-free or uninterrupted and are not liable for decisions made based on the App's content.
 
-7. Changes and discontinuation of service
+8. Changes and discontinuation of service
 
 We may modify, add to, or discontinue features of the App from time to time. We will notify you of material changes to these Terms through the App.
 
-8. Governing law
+9. Governing law
 
 These Terms are governed by the laws of the Republic of Kazakhstan.
 
-9. Contact
+10. Contact
 
 For questions about using the App, contact us at: support@arcanum.garden
