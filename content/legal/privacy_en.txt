@@ -34,7 +34,9 @@ Day entries are written by you. They may contain personal information, including
 
 We do not store the text of your day entries or the signal marks on our server: the text is used only to generate the discovery and the marks. We do NOT send your name, birth date, time, or place for these features.
 
-Diary export. The export button gathers your entries, analyses, daily cards, and spreads into files on your device and opens the system share sheet. We do not receive these files; where you save or send them is up to you.
+Full archetype analysis. When you open the full archetype analysis, your test result (your leading and second archetypes and your scores across the twelve archetypes), your app language, and an anonymous device identifier are sent to our server. The server passes the test result to a third-party AI provider (see section 8) to generate the analysis text. The test result and the analysis text are stored on our server so that the analysis is not generated again when you reopen it. Your answers to individual test questions are not sent to the server.
+
+Diary export and restore. The export button gathers your entries, analyses, daily cards, and spreads into files on your device and opens the system share sheet. The backup file also contains your profile data (name, date, time and place of birth), your partner's data if you entered it, your test result, and your life-area ratings. We do not receive these files; where you save or send them is up to you. Restoring from a backup reads the file you choose on your device and does not send it to our server.
 
 5. What we store on our server, and for how long
 
