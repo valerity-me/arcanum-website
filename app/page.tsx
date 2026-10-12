@@ -11,7 +11,7 @@ const appJsonLd = {
   applicationCategory: "LifestyleApplication",
   operatingSystem: "iOS, Android",
   description:
-    "Tarot spreads, a real natal chart, and daily guidance — full readings that interpret your situation, not just card meanings.",
+    "Take the archetype test, keep a ten-second daily diary, and see your hidden abilities, what changes your mood, and a book about you that grows every week.",
   publisher: {
     "@type": "Organization",
     name: "VO Digital",

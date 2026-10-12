@@ -1,10 +1,8 @@
 # Arcanum
 
-> Arcanum is a dark, cosmic mobile app (iOS + Android, not yet published) for tarot spreads, a real natal chart, and daily guidance. Made by VO Digital, a sole proprietorship registered in Kazakhstan.
+> Arcanum is a life diary app: an archetype test, daily entries with mood tracking, analysis of patterns in the entries, eight personal metrics, a book about the user that gains a page every week, plus a daily tarot card and tarot spreads for reflection. It does not offer astrology or predictions.
 
-Arcanum gives full AI-generated readings that interpret the person's actual situation — not just static card meanings. Features: a daily card, tarot spreads (general, relationships, career, near future), a natal chart computed from birth data, and a saved reading history.
-
-The app is not yet available on the App Store or Google Play; this site is a pre-launch landing page.
+Made by VO Digital, a sole proprietorship registered in Kazakhstan. The app is for iOS and Android and is not yet available on the App Store or Google Play; this site is a pre-launch landing page.
 
 ## Pages
 

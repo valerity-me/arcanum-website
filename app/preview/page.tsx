@@ -22,7 +22,7 @@ export default function Preview() {
       <Hero />
 
       {/* The scroll "dive": each scene is one Kling video block, scrubbed by scroll.
-          Order follows kling-shot-brief.md (card → spreads → astrology → grimoire). */}
+          Order follows kling-shot-brief.md (card → spreads → archetype → grimoire). */}
       {scenes.map((scene, i) => (
         <ScrollScene key={scene.id} scene={scene} index={i} />
       ))}

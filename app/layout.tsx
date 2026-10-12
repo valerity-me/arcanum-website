@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   // Absolute base for OG/social image URLs. Override per deploy via
   // NEXT_PUBLIC_SITE_URL once the real domain is known.
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://arcanum.garden"),
-  title: "Arcanum — Tarot, astrology & daily guidance",
+  title: "Arcanum — a diary that helps you find your path",
   description:
-    "Arcanum is a dark, cosmic app for tarot spreads, a real natal chart, and daily guidance. A quiet place for self-reflection and motivation.",
+    "Take the archetype test, keep a ten-second daily diary, and see your hidden abilities, what changes your mood, and a book about you that grows every week.",
   alternates: {
     canonical: "/",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Arcanum",
-    description: "Tarot, a real natal chart, and daily guidance — in one dark, quiet place.",
+    description: "An archetype test, a daily diary, and a book about you, in one dark, quiet place.",
     url: "/",
     siteName: "Arcanum",
     type: "website",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Arcanum",
-    description: "Tarot, a real natal chart, and daily guidance — in one dark, quiet place.",
+    description: "An archetype test, a daily diary, and a book about you, in one dark, quiet place.",
     images: ["/icon.png"],
   },
 };
@@ -49,7 +49,7 @@ const websiteJsonLd = {
   name: "Arcanum",
   url: "https://arcanum.garden",
   description:
-    "Arcanum is a dark, cosmic app for tarot spreads, a real natal chart, and daily guidance.",
+    "Take the archetype test, keep a ten-second daily diary, and see your hidden abilities, what changes your mood, and a book about you that grows every week.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

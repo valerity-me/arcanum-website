@@ -13,8 +13,8 @@ export default function Privacy() {
   return (
     <LegalPage
       docs={[
-        { lang: "EN", label: "English", text: readLegal("privacy_en.txt") },
-        { lang: "RU", label: "Русский", text: readLegal("privacy_ru.txt") },
+        { lang: "EN", label: "English", title: "Privacy Policy", text: readLegal("privacy_en.txt") },
+        { lang: "RU", label: "Русский", title: "Политика конфиденциальности", text: readLegal("privacy_ru.txt") },
       ]}
     />
   );

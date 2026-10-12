@@ -13,8 +13,8 @@ export default function Terms() {
   return (
     <LegalPage
       docs={[
-        { lang: "EN", label: "English", text: readLegal("terms_en.txt") },
-        { lang: "RU", label: "Русский", text: readLegal("terms_ru.txt") },
+        { lang: "EN", label: "English", title: "Terms of Use", text: readLegal("terms_en.txt") },
+        { lang: "RU", label: "Русский", title: "Условия использования", text: readLegal("terms_ru.txt") },
       ]}
     />
   );

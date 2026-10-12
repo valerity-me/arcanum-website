@@ -1,13 +1,16 @@
 import Link from "next/link";
 
-export type LegalDoc = { lang: "EN" | "RU"; label: string; text: string };
+// `title` is the document heading shown on the page. It is the file's first
+// line in regular case (the files carry it in capitals); everything after that
+// first line is rendered verbatim.
+export type LegalDoc = { lang: "EN" | "RU"; label: string; title: string; text: string };
 
 /**
  * Readable shell for legal documents. Each language version is rendered
  * verbatim from the app's assets/legal/*.txt (the single source of truth):
  * same words, same order. The plain-text conventions of those files map to
  * markup like this:
- *   - first line               -> document title (h1 for the first document)
+ *   - first line               -> replaced by `title` (regular case); h1 for the first document
  *   - "Effective date…" line   -> caption right under the title
  *   - "N. Heading" line        -> h2
  *   - lines starting with "- " -> <li> of a list, after their intro line
@@ -15,7 +18,7 @@ export type LegalDoc = { lang: "EN" | "RU"; label: string; text: string };
  *   - support e-mail           -> mailto link; bare domain/path -> new-tab link
  */
 export default function LegalPage({ docs }: { docs: LegalDoc[] }) {
-  const parsed = docs.map((d) => ({ doc: d, ...parseLegalDoc(d.text) }));
+  const parsed = docs.map((d) => ({ doc: d, title: d.title, ...parseLegalDoc(d.text) }));
   const first = parsed[0];
 
   return (
@@ -30,7 +33,7 @@ export default function LegalPage({ docs }: { docs: LegalDoc[] }) {
 
         <h1
           lang={first.doc.lang.toLowerCase()}
-          className="break-words font-display text-2xl font-medium text-paper sm:text-4xl"
+          className="break-words font-display text-4xl font-medium text-paper"
         >
           {first.title}
         </h1>
@@ -64,7 +67,7 @@ export default function LegalPage({ docs }: { docs: LegalDoc[] }) {
             {/* The first document's title is the page h1 above; the others
                 carry their own title here, styled the same way. */}
             {idx > 0 && (
-              <h2 className="mb-2 break-words font-display text-2xl font-medium text-paper sm:text-4xl">
+              <h2 className="mb-2 break-words font-display text-4xl font-medium text-paper">
                 {title}
               </h2>
             )}
@@ -128,25 +131,24 @@ const SECTION_HEADING_RE = /^\d+\.\s+\S/;
 const LEAD_INS = [
   "Entry tagging.",
   "Full archetype analysis.",
-  "Book page.",
+  "Book.",
   "Diary export and restore.",
   "Разметка записей.",
   "Полный разбор архетипа.",
-  "Страница книги.",
+  "Книга.",
   "Экспорт и восстановление дневника.",
 ];
 
 // Splits the plain-text document into title, effective-date caption and a flat
 // list of heading/body blocks. Nothing is dropped or reworded.
 function parseLegalDoc(text: string): {
-  title: string;
   effectiveDate: string | null;
   blocks: Block[];
 } {
   const paragraphs = splitParagraphs(text);
-  if (paragraphs.length === 0) return { title: "", effectiveDate: null, blocks: [] };
+  if (paragraphs.length === 0) return { effectiveDate: null, blocks: [] };
 
-  const [title, ...rest] = paragraphs;
+  const [, ...rest] = paragraphs; // first line = title, shown via `title` instead
   let effectiveDate: string | null = null;
   let body = rest;
   if (rest.length > 0 && EFFECTIVE_DATE_RE.test(rest[0])) {
@@ -172,7 +174,7 @@ function parseLegalDoc(text: string): {
     };
   });
 
-  return { title, effectiveDate, blocks };
+  return { effectiveDate, blocks };
 }
 
 function splitParagraphs(text: string): string[] {

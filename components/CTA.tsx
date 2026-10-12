@@ -27,7 +27,7 @@ export default function CTA() {
 
         <h2 className="font-display text-5xl font-medium tracking-wide text-paper sm:text-7xl">Arcanum</h2>
         <p className="mt-4 max-w-md font-body text-base text-muted sm:text-lg">
-          Tarot, a real natal chart, and daily guidance — in one dark, quiet place.
+          An archetype test, a daily diary, and a book about you, in one dark, quiet place.
         </p>
 
         <div className="mt-10">

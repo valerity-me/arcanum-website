@@ -41,8 +41,7 @@ export default function Hero() {
           Your cards are waiting
         </h1>
         <p className="mt-5 max-w-xl font-body text-base text-muted sm:text-lg">
-          Tarot, a real natal chart, and daily guidance — full readings that interpret your
-          situation, not just card meanings.
+          Arcanum begins with an archetype test and a ten-second daily entry. From them it shows the abilities you overlook, what lifts you and what drains you, and writes a book about you, with a new page every week. A daily tarot card and spreads are there when you want to reflect.
         </p>
 
         <a
