@@ -1,16 +1,16 @@
 PRIVACY POLICY
 
-Effective date: October 10, 2026
+Effective date: October 12, 2026
 
 VO Digital ("we," "us," or "our"), a sole proprietorship registered in the Republic of Kazakhstan, develops the Arcanum mobile application (listed in the app stores as Arcanum Garden; the "App"). This Privacy Policy explains what data the App processes, how we use it, who we share it with, and the rights you have. We are the data controller for the processing described here. If you have any questions, contact us at support@arcanum.garden.
 
 1. Data that stays on your device only
 
-While using the App, you may enter: your birth date, time, and place (and optionally your partner's), a nickname, gender, and a profile photo from your device's gallery. This information is used to calculate your natal chart, zodiac signs, and compatibility, and to personalize the interface — all of these calculations run directly on your device.
+While using the App, you may enter: your birth date, time, and place, a nickname, gender, and a profile photo from your device's gallery. Your birth date is used to calculate your personal dynamics (your daily indicators); the rest is used to personalize the interface. Birth time and place are optional. All of these calculations run directly on your device.
 
 Your exact birth date, time, and place are stored LOCALLY on your device and are never transmitted to our servers in their original form. We have no access to them.
 
-The following is also stored on your device: your answers to the archetype test and its result, your ratings of life areas in the Wheel of Life, your day entries (the mood and energy you marked and the text of the main event), and the profile calculated from them. The test, the Wheel of Life, and the profile calculation run directly on your device. Day entries leave your device only in the case described in section 4, and only when you take that action.
+The following is also stored on your device: your answers to the archetype test and its result, your ratings of life areas in the Wheel of Life, your day entries (the state you marked and the text of the main event), the profile calculated from them, and your book page. The test, the Wheel of Life, and the profile calculation run directly on your device. Your day entries, test result, and life-area ratings leave your device only in the cases described in sections 3 and 4.
 
 2. Data sent to our server to generate a spread interpretation
 
@@ -18,34 +18,35 @@ When you request a full interpretation of a spread, the following is sent to our
 
 Our server uses this data to generate the interpretation text through a third-party AI provider (see section 8) and returns it to you. We do NOT send your name, birth date, time, or place for this feature.
 
-3. Data sent to our server to generate a natal portrait or compatibility interpretation
+3. Data sent to our server for Discoveries and entry tagging
 
-When you open the "Detailed insight" on the Astrology tab (a full AI-generated natal portrait) or a compatibility interpretation with a partner, only derived astrological data — computed on your device — is sent to our server: the zodiac signs and house numbers your planets fall in, the significant aspects between planets (for compatibility, between your chart and your partner's), and the resulting compatibility scores, along with an anonymous device identifier and your app language.
+When you tap "Open" in the Discoveries block, your most recent day entries (no more than 60) are sent to our server: the date of each entry, the state you marked, and the text of the main event, together with the name of your archetype, your app language, and an anonymous device identifier (see section 6). The server passes this data to a third-party AI provider (see section 8) to generate the discovery text and returns it to you. This happens only when you tap, never automatically.
 
-We do NOT send your (or your partner's) exact birth date, time, or place for this feature, nor your name: the server only receives already-abstracted signs, house numbers, and aspect types, not the original birth data.
-
-4. Data sent to our server for Discoveries and profile recalculation
-
-When you tap "Open" in the Discoveries block, your most recent day entries (no more than 60) are sent to our server: the date of each entry, the mood and energy you marked, and the text of the main event, together with the name of your archetype, your app language, and an anonymous device identifier (see section 6). The server passes this data to a third-party AI provider (see section 8) to generate the discovery text and returns it to you. This happens only when you tap, never automatically.
-
-When you tap "Recalculate profile", the text of the main event from your new day entries (no more than 40 entries at a time) and an anonymous device identifier are sent to our server. The server passes these texts to a third-party AI provider (see section 8), which marks which signals an entry contains (for example, a decision of your own, contact with people, a named feeling or its cause) and which areas of life it is about (for example, work, health, family). These marks are returned to the App and stored on your device; the profile and wheel of life values are calculated on your device. This also happens only when you tap.
+Entry tagging. To calculate your profile metrics and the wheel of life, the App sends to our server the text of the main event from your day entries of the last 30 days that have not been tagged yet (no more than 40 entries at a time) and an anonymous device identifier. This happens automatically: after you save an entry that has text, when you open the Path tab, and when you recalculate your profile. The server passes these texts to a third-party AI provider (see section 8), which marks which signals an entry contains (for example, a decision of your own, contact with people, a named feeling or its cause, a surge of energy or tiredness) and which areas of life it is about (for example, work, health, family). These marks are returned to the App and stored on your device; the profile and wheel of life values are calculated on your device. When we refine the set of signals, entries from the last 30 days may be sent for tagging again.
 
 Day entries are written by you. They may contain personal information, including about your mood, how you feel, and other people; only write what you are comfortable sharing. The App is not a medical service, does not diagnose, and is not a substitute for professional advice.
 
-We do not store the text of your day entries or the signal marks on our server: the text is used only to generate the discovery and the marks. We do NOT send your name, birth date, time, or place for these features.
+We do not store the text of your day entries or the signal marks on our server: the text is used only to generate the discovery and the marks. We keep only a technical record of the request itself (its time and the number of entries), which is needed for usage limits. We do NOT send your name, birth date, time, or place for these features.
+
+4. Data sent to our server for the archetype analysis and the book page. Diary export
 
 Full archetype analysis. When you open the full archetype analysis, your test result (your leading and second archetypes and your scores across the twelve archetypes), your app language, and an anonymous device identifier are sent to our server. The server passes the test result to a third-party AI provider (see section 8) to generate the analysis text. The test result and the analysis text are stored on our server so that the analysis is not generated again when you reopen it. Your answers to individual test questions are not sent to the server.
 
-Diary export and restore. The export button gathers your entries, analyses, daily cards, and spreads into files on your device and opens the system share sheet. The backup file also contains your profile data (name, date, time and place of birth), your partner's data if you entered it, your test result, and your life-area ratings. We do not receive these files; where you save or send them is up to you. Restoring from a backup reads the file you choose on your device and does not send it to our server.
+Book page. When you tap "Write the first page" or "Rewrite the page" on the Book tab, the following is sent to our server: the names and short descriptions of your leading and second archetypes, your ratings of life areas and the areas you chose to work on, up to 14 of your first day entries that have text (the date, time, the state you marked, and the text of the main event, no more than 240 characters from each), the pronoun you chose ("he", "she", or "they"), your app language, and an anonymous device identifier. The server passes this data to a third-party AI provider (see section 8) to write the page and returns it to you. The page text and the names of your archetypes are stored on our server so that the page is not written again when the same request is repeated; your day entries and life-area ratings are not stored on the server. This happens only when you tap.
+
+Diary export and restore. The export button gathers your entries, analyses, daily cards, and spreads into files on your device and opens the system share sheet. The backup file also contains your profile data (name, date, time and place of birth), your partner's data if you entered it, your test result, your life-area ratings, and your book page. We do not receive these files; where you save or send them is up to you. Restoring from a backup reads the file you choose on your device and does not send it to our server.
 
 5. What we store on our server, and for how long
 
 To let the App remember your past readings and to power features like your reading history and personalized context, our server stores, linked to your anonymous device identifier:
 - your reading history: the theme and drawn cards of each spread, and the generated interpretation text;
 - a compact profile derived from that history (how often you use each theme, recurring cards, and your most recent readings);
-- the texts of the discoveries generated for you (but not the day entries they were based on).
+- the texts of the discoveries generated for you (but not the day entries they were based on);
+- the text of your full archetype analysis together with the test result it was written from;
+- the text of your book page and the names of your archetypes (but not the day entries or life-area ratings it was written from);
+- technical records of entry-tagging requests (their time and the number of entries, without any text).
 
-This data is stored for as long as you use the App. It is not linked to your name or contact details — only to the anonymous device identifier. You can delete all of it at any time (see section 10). The free-text question and relationship status from section 2 are used to generate the interpretation and are sent to the AI provider, but are not stored as separate fields by us; note that the generated interpretations and discoveries we store may reflect the content of your question or your entries.
+This data is stored for as long as you use the App. It is not linked to your name or contact details — only to the anonymous device identifier. You can delete all of it at any time (see section 10). The free-text question and relationship status from section 2 are used to generate the interpretation and are sent to the AI provider, but are not stored as separate fields by us; note that the generated interpretations, discoveries, and book page we store may reflect the content of your question or your entries.
 
 6. Technical identifiers
 
@@ -60,7 +61,7 @@ If you purchase a subscription, payment is processed by the App Store (Apple Inc
 We share the limited data described above with the following providers, only to run the App:
 - Apple Inc. and Google LLC — app distribution and payment processing;
 - RevenueCat, Inc. — subscription management (privacy policy: revenuecat.com/privacy);
-- Google LLC (Gemini API) — generation of interpretation and discovery texts from the data in sections 2-4 (privacy policy: policies.google.com/privacy; API terms: ai.google.dev/gemini-api/terms). Data sent to the Gemini API on a paid tier is not used to train Google's models;
+- Google LLC (Gemini API) — generation of interpretation, discovery, and book page texts, and of the signal marks for your entries, from the data in sections 2-4 (privacy policy: policies.google.com/privacy; API terms: ai.google.dev/gemini-api/terms). Data sent to the Gemini API on a paid tier is not used to train Google's models;
 - PostHog, Inc. — product usage analytics (which screens and features are used, e.g. viewing the subscription offer), processed via PostHog Cloud (EU) (privacy policy: posthog.com/privacy). This data is linked only to the anonymous device identifier from section 6; we do not collect your IP address for this purpose. The content of your day entries, test answers, and Wheel of Life ratings is not sent to analytics;
 - our server hosting provider, located in the Netherlands, where the data in sections 2-6 is processed and stored.
 
@@ -72,13 +73,13 @@ Our server is located in the Netherlands. Some of the providers listed in sectio
 
 10. Your rights, and how to delete your data
 
-Regardless of where you live, you can delete all of your data directly in the App: open Settings > Data & account > "Delete account & data." This permanently removes your local data on the device (including your day entries, test result, and Wheel of Life ratings) AND your server-side reading history, discoveries, and profile. You can also uninstall the App to remove local data, and contact us by email for any request.
+Regardless of where you live, you can delete all of your data directly in the App: open Settings > Data & account > "Delete account & data." This permanently removes your local data on the device (including your day entries, test result, and Wheel of Life ratings) AND your server-side reading history, discoveries, archetype analysis, book page, and profile. You can also uninstall the App to remove local data, and contact us by email for any request.
 
 Depending on where you live, you may also have the right to: access the data we hold about you; correct it; restrict or object to its processing; receive a copy (portability); and withdraw consent. To exercise any of these, contact us at support@arcanum.garden. If you are in the European Economic Area or the United Kingdom, you also have the right to lodge a complaint with your local data protection authority.
 
 11. California residents (CCPA/CPRA)
 
-If you are a California resident: the categories of personal information we process are described in sections 1-7 (identifiers such as the anonymous device ID, and information you provide such as astrological data, reading data, and day entries). We do NOT "sell" your personal information and do NOT "share" it for cross-context behavioral advertising, as those terms are defined under California law. You have the right to know what we process, to request deletion, and to correct your information — you can exercise deletion directly in the App (section 10) or by contacting us. We will not discriminate against you for exercising these rights.
+If you are a California resident: the categories of personal information we process are described in sections 1-7 (identifiers such as the anonymous device ID, and information you provide such as reading data, your test result, life-area ratings, and day entries). We do NOT "sell" your personal information and do NOT "share" it for cross-context behavioral advertising, as those terms are defined under California law. You have the right to know what we process, to request deletion, and to correct your information — you can exercise deletion directly in the App (section 10) or by contacting us. We will not discriminate against you for exercising these rights.
 
 12. Do Not Track
 

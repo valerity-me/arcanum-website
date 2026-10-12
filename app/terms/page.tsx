@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 export default function Terms() {
   return (
     <LegalPage
-      title="Terms of Use"
       docs={[
         { lang: "EN", label: "English", text: readLegal("terms_en.txt") },
         { lang: "RU", label: "Русский", text: readLegal("terms_ru.txt") },

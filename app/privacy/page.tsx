@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 export default function Privacy() {
   return (
     <LegalPage
-      title="Privacy Policy"
       docs={[
         { lang: "EN", label: "English", text: readLegal("privacy_en.txt") },
         { lang: "RU", label: "Русский", text: readLegal("privacy_ru.txt") },

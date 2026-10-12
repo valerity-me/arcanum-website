@@ -1,12 +1,12 @@
 TERMS OF USE
 
-Effective date: October 10, 2026
+Effective date: October 12, 2026
 
 Welcome to Arcanum. By using the Arcanum application (listed in the app stores as Arcanum Garden; the "App"), developed by VO Digital, a sole proprietorship registered in the Republic of Kazakhstan ("we," "us"), you agree to these Terms.
 
 1. Description of the service
 
-Arcanum (listed in the app stores as Arcanum Garden) is an app for self-reflection, self-observation, and entertainment: a diary with day entries and mood marks, an archetype test, a profile of eight metrics, a wheel of life, analyses of your entries, as well as a daily card, tarot spreads, a natal chart, and astrological compatibility. Entry analyses, the full archetype analysis, the signal marks used to calculate profile metrics and the wheel of life, a full spread interpretation, and detailed natal chart and compatibility insights may be generated with the help of a third-party AI service (Google's Gemini API); what data is sent for this and how it is handled is described in our Privacy Policy. AI-generated text and marks may not always be accurate or complete. The archetype test, profile metrics, wheel of life, and entry analyses are not a psychological assessment and do not describe the state of your health. The App's content is for informational and entertainment purposes only and is NOT medical, psychological, financial, legal, or other professional advice. Any decisions you make based on the App's content are your own responsibility. If you are struggling or thinking about harming yourself, please contact a doctor, a mental health professional, or your local emergency services.
+Arcanum (listed in the app stores as Arcanum Garden) is an app for self-reflection, self-observation, and entertainment: a diary with day entries and state marks, a year view, an archetype test, a profile of eight metrics, a wheel of life, analyses of your entries, the first page of a book about you, as well as a daily card and tarot spreads. Entry analyses, the full archetype analysis, the book page, the signal marks used to calculate profile metrics and the wheel of life, and a full spread interpretation may be generated with the help of a third-party AI service (Google's Gemini API); what data is sent for this and how it is handled is described in our Privacy Policy. AI-generated text and marks may not always be accurate or complete. The archetype test, profile metrics, wheel of life, entry analyses, and the book page are not a psychological assessment and do not describe the state of your health. The App's content is for informational and entertainment purposes only and is NOT medical, psychological, financial, legal, or other professional advice. Any decisions you make based on the App's content are your own responsibility. If you are struggling or thinking about harming yourself, please contact a doctor, a mental health professional, or your local emergency services.
 
 2. Your entries
 
@@ -18,7 +18,7 @@ The App is intended for users aged 16 and older. If you are under 16, please use
 
 4. Subscriptions and payment
 
-Some features are free; others require a paid subscription (monthly or yearly), which may include a free trial period. Payment and auto-renewal are processed through the App Store or Google Play under their own terms. You can cancel your subscription at any time in your Apple ID or Google Play account settings — cancellation takes effect at the end of the current paid period. Refunds are governed by the respective app store's (Apple/Google) policy, not by us directly. In particular, the subscription unlocks entry analyses after the first two, the full archetype analysis, and full AI interpretations of spreads, the natal chart, and compatibility; the set of paid features may change.
+Some features are free; others require a paid subscription (weekly, monthly, or yearly), which may include a free trial period. Payment and auto-renewal are processed through the App Store or Google Play under their own terms. You can cancel your subscription at any time in your Apple ID or Google Play account settings — cancellation takes effect at the end of the current paid period. Refunds are governed by the respective app store's (Apple/Google) policy, not by us directly. Without a subscription you get, in particular, the first two entry analyses, two spreads with a full interpretation, and one book page. The subscription unlocks further entry analyses, the full archetype analysis, spreads with interpretation (up to four a day, one per theme), and rewriting the book page; the set of paid and free features may change.
 
 5. Promo codes
 
