@@ -105,7 +105,7 @@ export default function CinematicHero() {
               className="animate-blur-fade-up mb-6 max-w-xl text-base text-gray-400 sm:text-lg md:mb-10 md:text-xl"
               style={{ animationDelay: "500ms" }}
             >
-              Arcanum begins with an archetype test and a ten-second daily entry. From them it shows the abilities you overlook, what lifts you and what drains you, and writes a book about you, with a new page every week. A daily tarot card and spreads are there when you want to reflect.
+              Arcanum begins with an archetype test and a ten-second daily entry. From them it shows the abilities you overlook, what lifts you and what drains you, and writes a book about you, with a new page for every week of your diary. A daily tarot card and spreads are there when you want to reflect.
             </p>
 
             {/* App store badges */}
