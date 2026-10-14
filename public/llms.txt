@@ -1,6 +1,6 @@
 # Arcanum
 
-> Arcanum is a life diary app: an archetype test, daily entries with mood tracking, analysis of patterns in the entries, eight personal metrics, a book about the user that gains a page for every week of the diary, plus a daily tarot card and tarot spreads for reflection. It does not offer astrology or predictions.
+> Arcanum is a life diary app: an archetype test, daily entries with mood tracking, analysis of patterns in the entries, eight personal metrics, a book about the user that gains a chapter for every week of the diary, plus a daily tarot card and tarot spreads for reflection. It does not offer astrology or predictions.
 
 Made by VO Digital, a sole proprietorship registered in Kazakhstan. The app is for iOS and Android and is not yet available on the App Store or Google Play; this site is a pre-launch landing page.
 
