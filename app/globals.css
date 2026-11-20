@@ -55,23 +55,16 @@ body {
 }
 
 /* Hero art edges melt into the page. Mobile: fade out at the bottom, where
-   the text begins. Desktop: fade in from the left (toward the text) and out
-   at the bottom; the two masks intersect. -webkit- prefixes are required by
-   Safari. */
+   the text begins. Desktop: full bleed, only the bottom edge fades so the
+   legal line sits on calm black. -webkit- prefixes are required by Safari. */
 .hero-art-fade {
   -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
   mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
 }
 @media (min-width: 640px) {
   .hero-art-fade {
-    -webkit-mask-image:
-      linear-gradient(to right, transparent 0%, #000 30%),
-      linear-gradient(to bottom, #000 72%, transparent 100%);
-    -webkit-mask-composite: source-in;
-    mask-image:
-      linear-gradient(to right, transparent 0%, #000 30%),
-      linear-gradient(to bottom, #000 72%, transparent 100%);
-    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
   }
 }
 

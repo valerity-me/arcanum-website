@@ -3,9 +3,9 @@
 import { useEffect } from "react";
 import AppStoreBadge from "./AppStoreBadge";
 
-// Hero art: the Sage archetype from the app (risograph, grayscale source)
-// tinted to the brand violet. A stand-in until the dedicated diary scene.
-const HERO_ART = "/hero-sage.webp";
+// Hero art: a scene of writing in a journal by candlelight, subject on the
+// right, calm dark space on the left for the text.
+const HERO_ART = "/hero-diary.webp";
 
 export default function CinematicHero() {
   // Robust mobile viewport height: CSS vh/svh/dvh units are inconsistent
@@ -39,18 +39,25 @@ export default function CinematicHero() {
         aria-hidden
       />
 
-      {/* Archetype art. Mobile: a frame above the text. Desktop: a tall
-          panel on the right. Edges melt into the black page via a mask
-          (fine on an <img>, unlike on <video>). Dimmed on mid widths, where
-          the text runs over it. */}
-      <div className="pointer-events-none absolute inset-x-0 top-12 z-0 h-[46%] sm:inset-x-auto sm:right-0 sm:top-0 sm:aspect-[2/3] sm:h-full sm:opacity-50 lg:opacity-100">
+      {/* Hero scene. Mobile: a frame above the text, cropped to the figure
+          and the journal. Desktop: full bleed, the figure stays on the right.
+          Edges melt into the black page via a mask (fine on an <img>, unlike
+          on <video>). */}
+      <div className="pointer-events-none absolute inset-x-0 top-12 z-0 h-[46%] sm:inset-0 sm:h-full">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={HERO_ART}
           alt=""
-          className="hero-art-fade h-full w-full object-cover object-[50%_32%] sm:object-center"
+          className="hero-art-fade h-full w-full object-cover object-[76%_40%] sm:object-[72%_50%]"
         />
       </div>
+
+      {/* Desktop: a soft shade on the left keeps the text readable when a
+          narrow window pulls the figure toward it. */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 hidden bg-gradient-to-r from-black/70 via-black/20 to-transparent sm:block"
+        aria-hidden
+      />
 
       {/* Foreground column */}
       <div className="relative z-10 flex h-full flex-col">
@@ -84,11 +91,6 @@ export default function CinematicHero() {
             </div>
           </div>
         </div>
-
-        {/* Caption for the figure: who this is. Desktop only, bottom right. */}
-        <p className="animate-fade-rise absolute bottom-14 right-6 z-10 hidden max-w-[16rem] text-right text-sm text-gray-400 lg:right-12 lg:block" style={{ animationDelay: "300ms" }}>
-          The Sage, one of twelve archetypes. Meet the character you already are
-        </p>
 
         {/* Legal footer: pinned close to the true bottom edge, independent of the
             title/description/badges above (which bottom-align as their own
