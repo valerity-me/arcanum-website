@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   // Absolute base for OG/social image URLs. Override per deploy via
   // NEXT_PUBLIC_SITE_URL once the real domain is known.
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://arcanum.garden"),
-  title: "Arcanum — a diary that helps you find your path",
+  title: "Arcanum — a diary that helps you untangle your thoughts",
   description:
     "Take the archetype test, keep a ten-second daily diary, and see your hidden abilities, what changes your mood, and a book about you that grows every week.",
   alternates: {

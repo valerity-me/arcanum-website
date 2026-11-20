@@ -3,7 +3,9 @@
 import { useEffect } from "react";
 import AppStoreBadge from "./AppStoreBadge";
 
-const VIDEO_URL = "/hero-loop.mp4";
+// Hero art: the Sage archetype from the app (risograph, grayscale source)
+// tinted to the brand violet. A stand-in until the dedicated diary scene.
+const HERO_ART = "/hero-sage.webp";
 
 export default function CinematicHero() {
   // Robust mobile viewport height: CSS vh/svh/dvh units are inconsistent
@@ -31,45 +33,24 @@ export default function CinematicHero() {
     <div
       className="hero-viewport relative w-full overflow-hidden bg-black font-body text-white"
     >
-      {/* Mobile-only ambient glow behind the floating card */}
+      {/* Mobile-only ambient glow behind the figure */}
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,rgba(106,46,230,0.20),transparent_60%)] sm:hidden"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(106,46,230,0.20),transparent_60%)] sm:hidden"
         aria-hidden
       />
 
-      {/* Background video.
-          Mobile: a large frame focused on the card. Desktop: full-bleed cover. */}
-      <div className="absolute left-1/2 top-12 z-0 h-[44%] w-[99%] -translate-x-1/2 overflow-hidden sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0">
-        <video
-          className="h-full w-full object-cover object-[90%_42%] sm:object-center"
-          src={VIDEO_URL}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-
-        {/* Fade to black at the top and bottom edges of the video frame.
-            Plain gradient overlays, not a CSS mask/filter: masking a <video>
-            element is unreliable across Safari versions (hardware video
-            decode lives on its own compositing layer that often ignores
-            mask-image), whereas an ordinary alpha-blended gradient div works
-            identically in every browser. */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black to-transparent sm:hidden"
-          aria-hidden
-        />
-        <div
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black to-transparent sm:hidden"
-          aria-hidden
+      {/* Archetype art. Mobile: a frame above the text. Desktop: a tall
+          panel on the right. Edges melt into the black page via a mask
+          (fine on an <img>, unlike on <video>). Dimmed on mid widths, where
+          the text runs over it. */}
+      <div className="pointer-events-none absolute inset-x-0 top-12 z-0 h-[46%] sm:inset-x-auto sm:right-0 sm:top-0 sm:aspect-[2/3] sm:h-full sm:opacity-50 lg:opacity-100">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={HERO_ART}
+          alt=""
+          className="hero-art-fade h-full w-full object-cover object-[50%_32%] sm:object-center"
         />
       </div>
-
-      {/* Bottom blur overlay — desktop full-bleed only (mobile text sits on the dark bg) */}
-      <div
-        className="bottom-blur-mask pointer-events-none absolute inset-0 z-[1] hidden sm:block"
-        aria-hidden
-      />
 
       {/* Foreground column */}
       <div className="relative z-10 flex h-full flex-col">
@@ -87,13 +68,13 @@ export default function CinematicHero() {
           {/* One entrance for the whole block: a short fade and rise. */}
           <div className="animate-fade-rise max-w-2xl" style={{ animationDelay: "150ms" }}>
             {/* Title */}
-            <h1 className="mb-3 font-display text-[40px] font-medium leading-[1.05] sm:mb-4 sm:text-6xl md:mb-6 md:text-7xl">
-              Your cards are waiting
+            <h1 className="mb-3 text-balance font-display text-[40px] font-medium leading-[1.05] sm:mb-4 sm:text-6xl md:mb-6 md:text-7xl">
+              Untangle your thoughts, ten seconds a day
             </h1>
 
             {/* Description */}
             <p className="mb-6 max-w-xl text-base text-gray-400 sm:text-lg md:mb-10 md:text-xl">
-              Arcanum begins with an archetype test and a ten-second daily entry. From them it shows the abilities you overlook, what lifts you and what drains you, and writes a book about you, with a new chapter for every week of your diary. A daily tarot card and spreads are there when you want to reflect.
+              Write a line about your day. Arcanum notices what lifts you and what drains you, and turns your weeks into a book about you.
             </p>
 
             {/* App store badges */}
@@ -103,6 +84,11 @@ export default function CinematicHero() {
             </div>
           </div>
         </div>
+
+        {/* Caption for the figure: who this is. Desktop only, bottom right. */}
+        <p className="animate-fade-rise absolute bottom-14 right-6 z-10 hidden max-w-[16rem] text-right text-sm text-gray-400 lg:right-12 lg:block" style={{ animationDelay: "300ms" }}>
+          The Sage, one of twelve archetypes. Meet the character you already are
+        </p>
 
         {/* Legal footer: pinned close to the true bottom edge, independent of the
             title/description/badges above (which bottom-align as their own
