@@ -29,8 +29,7 @@ export default function CinematicHero() {
 
   return (
     <div
-      className="hero-viewport relative w-full overflow-hidden bg-black text-white"
-      style={{ fontFamily: "'Inter', sans-serif" }}
+      className="hero-viewport relative w-full overflow-hidden bg-black font-body text-white"
     >
       {/* Mobile-only ambient glow behind the floating card */}
       <div
@@ -40,7 +39,7 @@ export default function CinematicHero() {
 
       {/* Background video.
           Mobile: a large frame focused on the card. Desktop: full-bleed cover. */}
-      <div className="absolute left-1/2 top-[32%] z-0 h-[80%] w-[99%] -translate-x-1/2 -translate-y-1/2 overflow-hidden sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0">
+      <div className="absolute left-1/2 top-12 z-0 h-[44%] w-[99%] -translate-x-1/2 overflow-hidden sm:left-0 sm:top-0 sm:h-full sm:w-full sm:translate-x-0 sm:translate-y-0">
         <video
           className="h-full w-full object-cover object-[90%_42%] sm:object-center"
           src={VIDEO_URL}
@@ -74,51 +73,33 @@ export default function CinematicHero() {
 
       {/* Foreground column */}
       <div className="relative z-10 flex h-full flex-col">
-        {/* Navbar — logo only */}
+        {/* Navbar — wordmark only, set in the brand display face */}
         <nav className="relative z-50 flex items-center justify-between px-4 py-4 sm:px-6 md:px-12 md:py-6">
-          <div
-            className="animate-blur-fade-up flex h-8 items-center md:h-10"
-            style={{ animationDelay: "0ms" }}
-          >
-            <span
-              className="text-xl font-medium tracking-[0.25em] md:text-2xl"
-              style={{ display: "inline-block", transform: "scaleY(0.9)" }}
-            >
-              ARCANUM
+          <div className="flex h-8 items-center md:h-10">
+            <span className="font-display text-2xl font-medium tracking-[0.02em] md:text-3xl">
+              Arcanum
             </span>
           </div>
         </nav>
 
         {/* Hero content */}
         <div className="z-10 flex flex-1 flex-col justify-end px-4 pb-24 sm:px-6 sm:pb-24 md:px-12 md:pb-28">
-          <div className="max-w-2xl">
+          {/* One entrance for the whole block: a short fade and rise. */}
+          <div className="animate-fade-rise max-w-2xl" style={{ animationDelay: "150ms" }}>
             {/* Title */}
-            <h1
-              className="animate-blur-fade-up mb-2 text-2xl font-normal sm:mb-4 sm:text-5xl md:mb-6 md:text-6xl lg:text-7xl"
-              style={{ animationDelay: "400ms", letterSpacing: "-0.04em" }}
-            >
+            <h1 className="mb-3 font-display text-[40px] font-medium leading-[1.05] sm:mb-4 sm:text-6xl md:mb-6 md:text-7xl">
               Your cards are waiting
             </h1>
 
             {/* Description */}
-            <p
-              className="animate-blur-fade-up mb-6 max-w-xl text-base text-gray-400 sm:text-lg md:mb-10 md:text-xl"
-              style={{ animationDelay: "500ms" }}
-            >
+            <p className="mb-6 max-w-xl text-base text-gray-400 sm:text-lg md:mb-10 md:text-xl">
               Arcanum begins with an archetype test and a ten-second daily entry. From them it shows the abilities you overlook, what lifts you and what drains you, and writes a book about you, with a new chapter for every week of your diary. A daily tarot card and spreads are there when you want to reflect.
             </p>
 
             {/* App store badges */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-5">
-              <div className="animate-blur-fade-up" style={{ animationDelay: "600ms" }}>
-                <AppStoreBadge href={null} />
-              </div>
-              <StoreBadge
-                label="Google Play"
-                sub="Coming soon"
-                icon={<GooglePlayGlyph />}
-                delay="700ms"
-              />
+              <AppStoreBadge href={null} />
+              <StoreBadge label="Google Play" sub="Coming soon" />
             </div>
           </div>
         </div>
@@ -128,9 +109,9 @@ export default function CinematicHero() {
             block). `env(safe-area-inset-bottom)` keeps it clear of the home
             indicator bar on notched iPhones. */}
         <div
-          className="animate-blur-fade-up absolute inset-x-0 bottom-0 z-10 flex flex-col px-4 text-xs text-gray-400 sm:px-6 md:px-12"
+          className="animate-fade-rise absolute inset-x-0 bottom-0 z-10 flex flex-col px-4 text-xs text-gray-400 sm:px-6 md:px-12"
           style={{
-            animationDelay: "800ms",
+            animationDelay: "300ms",
             paddingBottom: "max(0.875rem, env(safe-area-inset-bottom))",
           }}
         >
@@ -158,42 +139,18 @@ export default function CinematicHero() {
   );
 }
 
-// Store badge styled to match the hero's liquid glass. Apps aren't published yet,
-// so these are non-interactive "Coming soon" pills. Swap for the official
-// App Store / Google Play badge artwork + real URLs once the listings are live.
-function StoreBadge({
-  label,
-  sub,
-  icon,
-  delay,
-}: {
-  label: string;
-  sub: string;
-  icon: React.ReactNode;
-  delay: string;
-}) {
+// Google Play pill in the hero's liquid glass. The app isn't on Google Play
+// yet, so it's a non-interactive "Coming soon" label. Text only: Google's
+// brand rules forbid recoloring the Play logo, so it waits for the official
+// badge artwork, which goes in together with the real listing URL.
+function StoreBadge({ label, sub }: { label: string; sub: string }) {
   return (
     <div
-      className="liquid-glass animate-blur-fade-up flex items-center gap-3 rounded-full px-5 py-2.5 sm:px-6 sm:py-3"
-      style={{ animationDelay: delay }}
+      className="liquid-glass flex h-12 flex-col justify-center rounded-full px-5 leading-tight sm:px-6"
       title="Coming soon"
     >
-      <span className="text-white">{icon}</span>
-      <span className="flex flex-col leading-tight">
-        <span className="text-[10px] uppercase tracking-widest text-gray-400">{sub}</span>
-        <span className="text-sm font-semibold text-white sm:text-base">{label}</span>
-      </span>
+      <span className="text-xs text-gray-400">{sub}</span>
+      <span className="text-sm font-semibold text-white sm:text-base">{label}</span>
     </div>
-  );
-}
-
-function GooglePlayGlyph() {
-  return (
-    <svg width="18" height="20" viewBox="0 0 24 24" aria-hidden>
-      <path d="M3.6 1.8c-.2.2-.3.5-.3.9v18.6c0 .4.1.7.3.9l.1.1L14 12.1v-.2L3.7 1.7l-.1.1z" fill="#9A6BF2" />
-      <path d="M17.5 15.6 14 12.1v-.2l3.5-3.5.1.1 4.1 2.3c1.2.7 1.2 1.8 0 2.5l-4.2 2.3z" fill="#E3C77B" />
-      <path d="m17.6 15.5-3.6-3.5L3.6 22.3c.4.4 1 .5 1.8.1l12.2-6.9" fill="#D8C9F8" />
-      <path d="M17.6 8.5 5.4 1.6c-.8-.4-1.4-.4-1.8.1L14 12.1l3.6-3.6z" fill="#6A2EE6" />
-    </svg>
   );
 }

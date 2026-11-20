@@ -67,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Tailwind's fontFamily lists these names directly (font-display /
             font-body), so if the CDN is slow the fallbacks in that list apply. */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant:wght@500&family=Manrope:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
