@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import AppStoreBadge from "./AppStoreBadge";
+import GooglePlayBadge from "./GooglePlayBadge";
 
 // Hero art: a scene of writing in a journal by candlelight, subject on the
 // right, calm dark space on the left for the text.
@@ -87,7 +88,7 @@ export default function CinematicHero() {
             {/* App store badges */}
             <div className="flex flex-wrap items-center gap-4 sm:gap-5">
               <AppStoreBadge href={null} />
-              <StoreBadge label="Google Play" sub="Coming soon" />
+              <GooglePlayBadge href={null} />
             </div>
           </div>
         </div>
@@ -123,22 +124,6 @@ export default function CinematicHero() {
           </p>
         </div>
       </div>
-    </div>
-  );
-}
-
-// Google Play pill in the hero's liquid glass. The app isn't on Google Play
-// yet, so it's a non-interactive "Coming soon" label. Text only: Google's
-// brand rules forbid recoloring the Play logo, so it waits for the official
-// badge artwork, which goes in together with the real listing URL.
-function StoreBadge({ label, sub }: { label: string; sub: string }) {
-  return (
-    <div
-      className="liquid-glass flex h-12 flex-col justify-center rounded-full px-5 leading-tight sm:px-6"
-      title="Coming soon"
-    >
-      <span className="text-xs text-gray-400">{sub}</span>
-      <span className="text-sm font-semibold text-white sm:text-base">{label}</span>
     </div>
   );
 }
