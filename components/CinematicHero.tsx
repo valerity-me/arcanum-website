@@ -74,10 +74,14 @@ export default function CinematicHero() {
         {/* Hero content */}
         <div className="z-10 flex flex-1 flex-col justify-end px-4 pb-24 sm:px-6 sm:pb-24 md:px-12 md:pb-28">
           {/* One entrance for the whole block: a short fade and rise. */}
-          <div className="animate-fade-rise max-w-2xl" style={{ animationDelay: "150ms" }}>
+          <div className="animate-fade-rise max-w-3xl" style={{ animationDelay: "150ms" }}>
             {/* Title */}
-            <h1 className="mb-3 text-balance font-display text-[40px] font-medium leading-[1.05] sm:mb-4 sm:text-6xl md:mb-6 md:text-7xl">
-              Untangle your thoughts, ten seconds a day
+            {/* Line breaks follow the meaning: "ten seconds a day" never splits,
+                and from sm up each half of the sentence gets its own line. */}
+            <h1 className="mb-3 font-display text-[40px] font-medium leading-[1.05] sm:mb-4 sm:text-6xl md:mb-6 md:text-7xl">
+              Untangle <span className="whitespace-nowrap">your thoughts,</span>
+              <br className="hidden sm:inline" />{" "}
+              <span className="whitespace-nowrap">ten seconds a day</span>
             </h1>
 
             {/* Description */}
