@@ -1,6 +1,8 @@
 import CinematicHero from "@/components/CinematicHero";
 import ArchetypesSection from "@/components/ArchetypesSection";
 import ArchetypesMotion from "@/components/ArchetypesMotion";
+import LegalFooter from "@/components/LegalFooter";
+import SiteDust from "@/components/SiteDust";
 
 // No ratingValue/reviewCount — the app isn't published on any store yet, so
 // those would be fabricated. Subscription prices ARE real (configured in App
@@ -74,6 +76,8 @@ export default function Home() {
       <CinematicHero />
       <ArchetypesSection />
       <ArchetypesMotion />
+      <LegalFooter />
+      <SiteDust />
     </>
   );
 }

@@ -1,10 +1,19 @@
 import AppStoreBadge from "./AppStoreBadge";
+import GooglePlayBadge from "./GooglePlayBadge";
 import { archetypes, type Archetype } from "@/lib/archetypes";
 
-// Second screen: the twelve archetypes. Plain markup, readable without any
-// script; the motion (smooth scroll, line reveals, pinned ribbon, dust) is
-// attached afterwards by <ArchetypesMotion />, which looks elements up by
-// their data-arch-* attributes. Styles live in app/globals.css (.arch-*).
+// Second screen: the archetypes. Plain markup, readable without any script;
+// the motion (line reveals, mask reveals) is attached afterwards by
+// <ArchetypesMotion />, which looks elements up by their data-arch-*
+// attributes. Styles live in app/globals.css (.arch-*).
+//
+// The test in the app covers twelve archetypes; the page shows these five for
+// now, in this order. The other pictures stay in public/archetypes/.
+const SHOWN = ["explorer", "creator", "jester", "magician", "ruler"];
+const shown = SHOWN.map((key) => archetypes.find((a) => a.key === key)).filter(
+  (a): a is Archetype => Boolean(a),
+);
+
 const FLIP_MARKER = "The flip side:";
 
 // `about` in the app is "<strength>. The flip side: <flip>". Same words, set
@@ -26,20 +35,14 @@ export default function ArchetypesSection() {
       data-arch-section
       className="relative bg-ink font-body text-paper"
     >
-      {/* Dust layer: one viewport-sized canvas that stays in view while the
-          section scrolls past (sticky), so it never grows with the pinned
-          scroll distance. Drawn by ArchetypesMotion; empty without it. */}
-      <div className="arch-dust" aria-hidden>
-        <canvas data-arch-dust />
-      </div>
-
       {/* The hero ends on pure black, the page is ink: a short blend hides the seam. */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 z-[1] h-32 bg-gradient-to-b from-black to-transparent"
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto max-w-content px-4 pt-28 sm:px-6 sm:pt-36 md:px-12">
+      {/* Same side gutters as the first screen, so the left edges line up. */}
+      <div className="relative z-10 px-4 pt-28 sm:px-6 sm:pt-36 md:px-12">
         {/* Line breaks follow the meaning: each half of the phrase stays whole. */}
         <h2
           id="archetypes-title"
@@ -59,24 +62,12 @@ export default function ArchetypesSection() {
         </p>
       </div>
 
-      {/* Ribbon. On a desktop with a mouse it is pinned and the page scroll
-          moves it sideways; everywhere else it is a swipeable row. */}
-      <div data-arch-pin className="arch-pin relative z-10">
-        <div className="arch-marquee font-display font-medium text-paper/[0.05]" aria-hidden>
-          <div className="arch-marquee-track">
-            {[0, 1].map((copy) => (
-              <span key={copy} className="arch-marquee-set">
-                {archetypes.map((a) => (
-                  <span key={a.key}>{a.name}</span>
-                ))}
-              </span>
-            ))}
-          </div>
-        </div>
-
+      {/* Cards: a row of all five on a wide screen with a mouse; a swipeable
+          row everywhere else. */}
+      <div className="arch-pin relative z-10">
         <div data-arch-scroller className="arch-scroller">
           <ul data-arch-track className="arch-track" role="list">
-            {archetypes.map((a) => {
+            {shown.map((a) => {
               const { strength, flip } = splitAbout(a.about);
               return (
                 <li key={a.key} data-arch-card className="arch-card">
@@ -113,17 +104,17 @@ export default function ArchetypesSection() {
             })}
           </ul>
         </div>
-
-        <div className="arch-progress" aria-hidden>
-          <span data-arch-bar />
-        </div>
       </div>
 
-      <div className="relative z-10 mx-auto flex max-w-content flex-col items-start gap-6 px-4 pb-28 pt-16 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:pb-36 sm:pt-20 md:px-12">
+      <div className="relative z-10 flex flex-col items-start gap-6 px-4 pb-24 pt-16 sm:flex-row sm:items-center sm:justify-between sm:px-6 sm:pb-28 sm:pt-20 md:px-12">
         <p data-arch-cta className="font-display text-3xl font-medium leading-[1.1] sm:text-4xl">
           Take the test in the app
         </p>
-        <AppStoreBadge href={null} />
+        {/* Both badges are 48px high (Google requires equal heights). */}
+        <div className="flex flex-wrap items-center gap-4 sm:gap-5">
+          <AppStoreBadge href={null} />
+          <GooglePlayBadge href={null} />
+        </div>
       </div>
     </section>
   );
