@@ -32,7 +32,7 @@ export default function CinematicHero() {
 
   return (
     <div
-      className="hero-viewport relative w-full overflow-hidden bg-black font-body text-white"
+      className="hero-viewport relative w-full overflow-hidden bg-black font-body text-paper"
     >
       {/* Mobile-only ambient glow behind the figure */}
       <div
@@ -85,7 +85,7 @@ export default function CinematicHero() {
             </h1>
 
             {/* Description */}
-            <p className="mb-6 max-w-xl text-base text-gray-400 sm:text-lg md:mb-10 md:text-xl">
+            <p className="mb-6 max-w-xl text-base text-muted sm:text-lg md:mb-10 md:text-xl">
               Write a line about your day. Arcanum notices what lifts you and what drains you, and turns your weeks into a book about you.
             </p>
 
@@ -102,27 +102,27 @@ export default function CinematicHero() {
             block). `env(safe-area-inset-bottom)` keeps it clear of the home
             indicator bar on notched iPhones. */}
         <div
-          className="animate-fade-rise absolute inset-x-0 bottom-0 z-10 flex flex-col px-4 text-xs text-gray-400 sm:px-6 md:px-12"
+          className="animate-fade-rise absolute inset-x-0 bottom-0 z-10 flex flex-col px-4 text-xs text-muted sm:px-6 md:px-12"
           style={{
             animationDelay: "300ms",
             paddingBottom: "max(0.875rem, env(safe-area-inset-bottom))",
           }}
         >
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            <a href="/privacy/" className="cursor-pointer transition-colors hover:text-white">
+            <a href="/privacy/" className="cursor-pointer transition-colors hover:text-paper">
               Privacy Policy
             </a>
-            <a href="/terms/" className="cursor-pointer transition-colors hover:text-white">
+            <a href="/terms/" className="cursor-pointer transition-colors hover:text-paper">
               Terms of Use
             </a>
             <a
               href="mailto:support@arcanum.garden"
-              className="cursor-pointer transition-colors hover:text-white"
+              className="cursor-pointer transition-colors hover:text-paper"
             >
               support@arcanum.garden
             </a>
           </div>
-          <p className="mt-1.5 max-w-2xl text-[11px] leading-relaxed text-gray-500">
+          <p className="mt-2 max-w-2xl text-[11px] leading-relaxed text-muted">
             © {new Date().getFullYear()} VO Digital — a sole proprietorship registered in the
             Republic of Kazakhstan. For entertainment and self-reflection.
           </p>

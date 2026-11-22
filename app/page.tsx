@@ -1,4 +1,6 @@
 import CinematicHero from "@/components/CinematicHero";
+import ArchetypesSection from "@/components/ArchetypesSection";
+import ArchetypesMotion from "@/components/ArchetypesMotion";
 
 // No ratingValue/reviewCount — the app isn't published on any store yet, so
 // those would be fabricated. Subscription prices ARE real (configured in App
@@ -70,6 +72,8 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
       />
       <CinematicHero />
+      <ArchetypesSection />
+      <ArchetypesMotion />
     </>
   );
 }

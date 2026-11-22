@@ -2,8 +2,9 @@
 // (public/badges/google-play-badge.png, 478×142, en-US, full color).
 // Per Google Play badge guidelines: use the artwork as provided, never
 // recolor or alter it, and link it to the app's Google Play listing.
-// Rendered at the same width as the App Store badge (144px) so the pair
-// reads as one row. While the app is not on Google Play yet, it is dimmed
+// Rendered at exactly the same height as the App Store badge (48px, h-12):
+// Google requires the two badges to match in height, so the height is fixed
+// and the width follows each artwork's own proportions. While the app is not on Google Play yet, it is dimmed
 // and not a link, the same way as the App Store badge.
 export default function GooglePlayBadge({ href }: { href: string | null }) {
   const badge = (
@@ -11,9 +12,9 @@ export default function GooglePlayBadge({ href }: { href: string | null }) {
     <img
       src="/badges/google-play-badge.png"
       alt="Get it on Google Play"
-      width={144}
-      height={42}
-      className="h-auto w-[144px]"
+      width={162}
+      height={48}
+      className="block h-12 w-auto"
     />
   );
 

@@ -54,12 +54,12 @@ body {
   height: var(--real-vh, 100dvh);
 }
 
-/* Hero art edges melt into the page. Mobile: fade out at the bottom, where
-   the text begins. Desktop: full bleed, only the bottom edge fades so the
+/* Hero art edges melt into the page. Mobile: fades in under the wordmark and
+   out at the bottom, where the text begins. Desktop: full bleed, only the bottom edge fades so the
    legal line sits on calm black. -webkit- prefixes are required by Safari. */
 .hero-art-fade {
-  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
-  mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 55%, transparent 100%);
 }
 @media (min-width: 640px) {
   .hero-art-fade {
@@ -117,4 +117,244 @@ body {
 .animate-fade-rise {
   opacity: 0;
   animation: fadeRise 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* ── Archetypes block ─────────────────────────────────────────────────────── */
+
+/* Dust canvas: viewport-sized and sticky, so it follows the section without
+   growing with the pinned scroll distance. */
+.arch-dust {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  height: var(--real-vh, 100vh);
+  margin-bottom: calc(var(--real-vh, 100vh) * -1);
+  pointer-events: none;
+}
+.arch-dust canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ribbon: a swipeable row by default (phones, tablets, no script). */
+.arch-pin {
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+.arch-pin {
+  --arch-gutter: 1rem;
+}
+.arch-scroller {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--arch-gutter);
+  scrollbar-width: none;
+}
+.arch-scroller::-webkit-scrollbar {
+  display: none;
+}
+.arch-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  padding-inline: var(--arch-gutter);
+}
+.arch-card {
+  flex: none;
+  width: min(72vw, 18rem);
+  scroll-snap-align: start;
+}
+@media (min-width: 640px) {
+  .arch-pin {
+    --arch-gutter: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .arch-pin {
+    --arch-gutter: 3rem;
+  }
+  .arch-track {
+    gap: 1.5rem;
+  }
+  .arch-card {
+    width: 20rem;
+  }
+}
+
+/* A card: the picture, then name and motto, then the about text. */
+.arch-article {
+  display: grid;
+  grid-template-columns: 100%;
+  outline: none;
+}
+.arch-article > * {
+  grid-column: 1;
+}
+.arch-mask {
+  grid-row: 1;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #0b0a0f;
+}
+.arch-inner {
+  width: 100%;
+  height: 100%;
+}
+.arch-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.arch-caption {
+  grid-row: 2;
+  padding-top: 1.25rem;
+}
+.arch-about {
+  grid-row: 3;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+.arch-flip {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgb(244 241 234 / 0.08);
+}
+
+.arch-progress,
+.arch-marquee {
+  display: none;
+}
+
+/* Pinned ribbon (class added by ArchetypesMotion on a desktop with a mouse):
+   the panel fills the real viewport, the page scroll moves the track. */
+.arch-pin.arch-pinned {
+  height: var(--real-vh, 100vh);
+  margin-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.arch-pinned .arch-scroller {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  scroll-snap-type: none;
+}
+.arch-pinned .arch-track {
+  will-change: transform;
+}
+/* The picture is a little wider than its card, so it can shift inside the mask. */
+.arch-pinned .arch-inner {
+  width: 112%;
+  margin-left: -6%;
+  will-change: transform;
+}
+/* Names of the archetypes, very quiet, behind the cards. */
+.arch-pinned .arch-marquee {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  pointer-events: none;
+  font-size: calc(var(--real-vh, 100vh) * 0.26);
+  line-height: 1;
+}
+.arch-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.arch-marquee-set {
+  display: flex;
+  flex: none;
+}
+.arch-marquee-set > span {
+  padding-inline: 0.4em;
+  white-space: nowrap;
+}
+/* One thin candle line shows how far along the ribbon you are. */
+.arch-pinned .arch-progress {
+  position: absolute;
+  z-index: 2;
+  left: var(--arch-gutter);
+  right: var(--arch-gutter);
+  bottom: max(2rem, 5vh);
+  display: block;
+  height: 1px;
+  background: rgb(244 241 234 / 0.08);
+}
+.arch-progress span {
+  display: block;
+  height: 100%;
+  background: #f5a623;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* Smooth scroll (Lenis). Native smooth scrolling must be off while it runs. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Desktop with a mouse: the about text is laid over the lower part of the
+   picture and shows on hover or keyboard focus; the picture grows a little
+   inside its mask. The row is sized from the real viewport height. */
+@media (min-width: 1024px) {
+  .arch-track {
+    gap: 2.5rem;
+  }
+  .arch-card {
+    width: calc(min(var(--real-vh, 100vh) * 0.6, 34rem) * 2 / 3);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .arch-about {
+    position: relative;
+    z-index: 1; /* above the picture while it is scaled (a transformed layer paints over static siblings) */
+    grid-row: 1;
+    align-self: end;
+    padding: 4rem 1.25rem 1.25rem;
+    border-radius: 0 0 4px 4px;
+    background: linear-gradient(to top, rgb(11 10 15 / 0.96) 55%, transparent);
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition:
+      opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+      transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .arch-article:hover .arch-about,
+  .arch-article:focus-visible .arch-about {
+    opacity: 1;
+    transform: none;
+  }
+  .arch-article:hover .arch-img,
+  .arch-article:focus-visible .arch-img {
+    transform: scale(1.06);
+  }
+  .arch-article:focus-visible {
+    outline: 1px solid rgb(244 241 234 / 0.5);
+    outline-offset: 6px;
+  }
 }

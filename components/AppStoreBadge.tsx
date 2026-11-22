@@ -14,7 +14,7 @@ export default function AppStoreBadge({ href }: { href: string | null }) {
       alt="Download on the App Store"
       height={48}
       width={143}
-      className="h-12 w-auto"
+      className="block h-12 w-auto"
     />
   );
 
